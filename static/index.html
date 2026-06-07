@@ -1,0 +1,2116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>记忆云 MemoryCloud | Yueming AI 智能体记忆平台</title>
+    <meta name="description" content="MemoryCloud（记忆云）是 Yueming AI 的智能体记忆平台，支持 Agent 长期记忆、团队协作记忆、Memory Suite 发布与同步。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="baidu-site-verification" content="codeva-QVYi3LueDI" />
+    <meta name="memorycloud-build" content="20260607-2356" />
+    <link rel="canonical" href="http://127.0.0.1:8000/" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MemoryCloud" />
+    <meta property="og:title" content="记忆云 MemoryCloud | Yueming AI 智能体记忆平台" />
+    <meta property="og:description" content="面向 Agent 和团队的长期记忆、工作记忆与 Memory Suite Registry。" />
+    <meta property="og:url" content="http://127.0.0.1:8000/" />
+    <meta property="og:image" content="http://127.0.0.1:8000/static/assets/memory-console.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="记忆云 MemoryCloud | Yueming AI 智能体记忆平台" />
+    <meta name="twitter:description" content="面向 Agent 和团队的长期记忆、工作记忆与 Memory Suite Registry。" />
+    <meta name="twitter:image" content="http://127.0.0.1:8000/static/assets/memory-console.png" />
+    <link rel="stylesheet" href="/static/styles.css?v=20260607-2356" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "MemoryCloud",
+        "alternateName": "记忆云",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "url": "http://127.0.0.1:8000/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Yueming AI",
+          "url": "http://127.0.0.1:8000/"
+        },
+        "description": "MemoryCloud（记忆云）是 Yueming AI 的智能体记忆平台，支持 Agent 长期记忆、团队协作记忆、Memory Suite 发布与同步。"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div id="launchIntro" class="launch-intro" aria-hidden="true">
+      <div class="launch-orbit">
+        <span class="launch-ring launch-ring-a"></span>
+        <span class="launch-ring launch-ring-b"></span>
+        <span class="launch-core">
+          <svg class="yueming-logo-svg" viewBox="0 0 96 96" focusable="false" aria-hidden="true">
+            <path class="yueming-logo-crescent" d="M62.5 12.5C42.5 16.2 27.5 33.1 27.5 52c0 22 17.4 39.1 39.3 37.6C51.8 84.7 41 70.7 41 54.3c0-17.3 11.7-31.9 28-36.2-2.3-2.4-4.1-4-6.5-5.6Z" />
+            <path class="yueming-logo-flow" d="M18.5 68.2C29.2 49.7 37.2 30.5 47.4 31.4c11.5 1.1 10 30.2 22.1 30.2 10.8 0 9.4-23.7 18.6-30.6" />
+            <path class="yueming-logo-foot" d="M25.2 74.8c10.2-5.7 21.6-6 32.1-.6 8.1 4.1 16.7 4.2 25.1-.5" />
+          </svg>
+        </span>
+        <span class="launch-scan"></span>
+      </div>
+      <div class="launch-wordmark">
+        <strong>MemoryCloud</strong>
+        <span>月明 AI · 记忆云</span>
+      </div>
+    </div>
+    <div class="shell">
+      <header class="site-header" aria-label="站点导航">
+        <div class="header-inner">
+          <a class="brand" href="/human/main" data-route-view="catalog" aria-label="记忆云 MemoryCloud">
+            <span class="brand-mark" aria-hidden="true">
+              <svg class="yueming-logo-svg" viewBox="0 0 96 96" focusable="false" aria-hidden="true">
+                <path class="yueming-logo-crescent" d="M62.5 12.5C42.5 16.2 27.5 33.1 27.5 52c0 22 17.4 39.1 39.3 37.6C51.8 84.7 41 70.7 41 54.3c0-17.3 11.7-31.9 28-36.2-2.3-2.4-4.1-4-6.5-5.6Z" />
+                <path class="yueming-logo-flow" d="M18.5 68.2C29.2 49.7 37.2 30.5 47.4 31.4c11.5 1.1 10 30.2 22.1 30.2 10.8 0 9.4-23.7 18.6-30.6" />
+                <path class="yueming-logo-foot" d="M25.2 74.8c10.2-5.7 21.6-6 32.1-.6 8.1 4.1 16.7 4.2 25.1-.5" />
+              </svg>
+            </span>
+            <span>
+              <strong>MemoryCloud</strong>
+              <small>月明 AI · 记忆云</small>
+            </span>
+          </a>
+
+          <nav class="nav" aria-label="主导航">
+            <a class="nav-item active" href="/human/main" data-view="catalog" aria-current="page">首页</a>
+            <a class="nav-item" href="/human/publish" data-view="publish">上传记忆</a>
+            <a class="nav-item" href="/human/account" data-view="workspace">我的记忆</a>
+            <a class="nav-item" href="/human/team" data-view="adaptive">团队空间</a>
+            <a class="nav-item" href="/human/enterprise" data-view="enterprise">企业服务</a>
+            <a class="nav-item" href="/human/docs" data-view="docs">文档<span class="hidden">文档中心 开发文档</span></a>
+            <details class="nav-menu">
+              <summary class="nav-more-trigger">更多<span class="hidden">服务入口</span></summary>
+              <div class="nav-submenu" aria-label="更多资源与服务入口">
+                <a class="route-link" href="/help" data-route-view="help">帮助中心</a>
+                <a class="route-link" href="/human/memory" data-route-view="memory">工程记忆</a>
+                <a class="route-link" href="/human/protocol" data-route-view="protocol">兼容机制</a>
+                <a class="route-link" href="/human/support" data-route-view="commerce">信任与支持<span class="hidden">商业化</span></a>
+                <a href="/agent/start" target="_blank" rel="noreferrer">Agent 入口</a>
+                <a href="/api/memory/local-deployments/health" target="_blank" rel="noreferrer">运行健康</a>
+                <a href="/memory-routes/mem0/health" target="_blank" rel="noreferrer">mem0</a>
+                <a href="/memory-routes/graphiti/health" target="_blank" rel="noreferrer">Graphiti</a>
+                <a href="/memory-routes/openviking/health" target="_blank" rel="noreferrer">OpenViking</a>
+                <a href="/memory-routes/supermemory/health" target="_blank" rel="noreferrer">supermemory</a>
+                <a href="/memory-routes/letta/health" target="_blank" rel="noreferrer">Letta</a>
+                <a href="/memory-routes/agentmemory/health" target="_blank" rel="noreferrer">agentmemory</a>
+                <a href="/memory-routes/cognee/health" target="_blank" rel="noreferrer">cognee</a>
+                <a href="/memory-routes/memvid/health" target="_blank" rel="noreferrer">memvid</a>
+                <a href="/memory-routes/hindsight/health" target="_blank" rel="noreferrer">Hindsight</a>
+                <a href="/memory-routes/memori/health" target="_blank" rel="noreferrer">Memori</a>
+                <a href="/admin-console">管理后台</a>
+              </div>
+            </details>
+          </nav>
+          <span class="hidden">Agent 注册 /agent/main /agent/publish /agent/account /agent/team /agent/memory /agent/enterprise /agent/docs /agent/doc /agent/persona /agent/support /agent/protocol /agent-start /agent-start.json /llms.txt /.well-known/agent.json</span>
+
+          <section class="session-box" aria-label="账户">
+            <div class="session-actions" id="guestSessionActions">
+              <button id="openLogin" class="button secondary" type="button">登录</button>
+              <button id="openRegister" class="button primary" type="button">注册</button>
+            </div>
+            <details id="accountMenu" class="account-menu hidden">
+              <summary class="account-trigger">
+                <span id="sessionState" class="session-state">未登录</span>
+              </summary>
+              <div class="account-submenu" aria-label="账户功能">
+                <a href="/human/account#account-overview" data-account-target="account-overview">我的记忆空间</a>
+                <a href="/human/account#my-memory" data-account-target="my-memory">记忆包</a>
+                <a href="/human/account#my-installs" data-account-target="my-installs">已安装记忆</a>
+                <a href="/human/account#workspace-section" data-account-target="workspace-section">工作空间</a>
+                <a href="/human/account#agent-bindings" data-account-target="agent-bindings">可用 Agent</a>
+                <a href="/human/account#api-keys" data-account-target="api-keys">安全设置</a>
+                <button id="logoutButton" type="button">退出登录</button>
+              </div>
+            </details>
+          </section>
+        </div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="view-kicker">
+          <div>
+            <p class="eyebrow">Yueming AI</p>
+            <h2 id="viewTitle">首页</h2>
+          </div>
+          <div class="topbar-actions">
+            <a id="agentViewShortcut" class="button primary route-link hidden" href="/agent/main" data-route-view="catalog" tabindex="-1" aria-hidden="true">进入 Agent 网页视图</a>
+            <a id="agentDocShortcut" class="button secondary route-link hidden" href="/agent/docs" data-route-view="docs" tabindex="-1" aria-hidden="true">Agent 文档</a>
+            <a id="humanViewShortcut" class="button secondary route-link hidden" href="/human/main" data-route-view="catalog">对应 human 页面</a>
+            <a class="button secondary link-button machine-entry-link hidden" href="/agent/start" target="_blank" rel="noreferrer">机器入口</a>
+            <div class="status-pill" id="apiStatus">检查服务中</div>
+          </div>
+        </div>
+
+        <section id="catalogView" class="view active" aria-labelledby="catalogHeading">
+          <div class="home-deck home-scroll" data-home-deck>
+            <div class="home-deck-stage">
+          <section class="agent-command-hero home-deck-page is-active" data-home-page="0" aria-labelledby="catalogHeading">
+            <img class="legacy-visual-reference" src="/static/assets/memory-console.png" alt="" width="1200" height="760" hidden />
+            <div class="agent-background-reel agent-boundless-field" aria-hidden="true">
+              <span class="memory-hero-art"></span>
+              <span class="memory-core-glow"></span>
+              <span class="memory-orbit orbit-a"></span>
+              <span class="memory-orbit orbit-b"></span>
+              <span class="memory-orbit orbit-c"></span>
+              <span class="boundless-sheet sheet-a memory-agent-node">
+                <span class="agent-face"><i></i><i></i><b></b></span>
+                <span class="agent-label">Agent Cursor</span>
+              </span>
+              <span class="boundless-sheet sheet-b memory-cloud-node">
+                <span class="cloud-core"></span>
+                <span class="cloud-chip chip-a">MEMORY.md</span>
+                <span class="cloud-chip chip-b">DREAMS.md</span>
+              </span>
+              <span class="boundless-sheet sheet-c memory-context-pack">
+                <span>Context Pack</span>
+                <strong>ready</strong>
+                <span class="hidden">已接入 MemoryCloud</span>
+                <span class="hidden">先做 Quick Connect，再按需升级启动项或导入旧记忆</span>
+              </span>
+              <span class="memory-ribbon ribbon-a memory-path path-read"></span>
+              <span class="memory-ribbon ribbon-b memory-path path-write"></span>
+              <span class="memory-ribbon ribbon-c memory-path path-sync"></span>
+              <span class="data-stream stream-a memory-token-stream stream-read"></span>
+              <span class="data-stream stream-b memory-token-stream stream-write"></span>
+              <span class="memory-particle particle-a memory-capsule capsule-memory">记忆</span>
+              <span class="memory-particle particle-b memory-capsule capsule-tool">工具</span>
+              <span class="memory-particle particle-c memory-capsule capsule-proof">来源</span>
+              <span class="memory-particle particle-d memory-capsule capsule-sync">同步</span>
+              <span class="boundless-horizon memory-runtime-line"></span>
+              <span class="boundless-line line-a memory-link link-a"></span>
+              <span class="boundless-line line-b memory-link link-b"></span>
+              <span class="boundless-line line-c memory-link link-c"></span>
+            </div>
+            <div class="agent-command-copy">
+              <p class="eyebrow hero-brand-lockup">
+                <span class="hero-brand-mark" aria-hidden="true">
+                  <svg class="yueming-logo-svg" viewBox="0 0 96 96" focusable="false" aria-hidden="true">
+                    <path class="yueming-logo-crescent" d="M62.5 12.5C42.5 16.2 27.5 33.1 27.5 52c0 22 17.4 39.1 39.3 37.6C51.8 84.7 41 70.7 41 54.3c0-17.3 11.7-31.9 28-36.2-2.3-2.4-4.1-4-6.5-5.6Z" />
+                    <path class="yueming-logo-flow" d="M18.5 68.2C29.2 49.7 37.2 30.5 47.4 31.4c11.5 1.1 10 30.2 22.1 30.2 10.8 0 9.4-23.7 18.6-30.6" />
+                    <path class="yueming-logo-foot" d="M25.2 74.8c10.2-5.7 21.6-6 32.1-.6 8.1 4.1 16.7 4.2 25.1-.5" />
+                  </svg>
+                </span>
+                <span>月明 AI · MemoryCloud</span>
+              </p>
+              <h3 id="catalogHeading">把这句发给你的 AI</h3>
+            </div>
+            <button id="copyAgentBrief" class="agent-command-input" type="button" aria-label="复制给 AI 的命令">
+              <code><span>完成</span><span data-agent-start-url>/agent/start</span></code>
+              <span class="command-copy-cue">点一下复制</span>
+            </button>
+            <p class="agent-command-hint">把这个发给你的 AI。点击命令可复制，向下滚动看发送后的过程。</p>
+            <div class="agent-command-actions" aria-label="下一步">
+              <button class="button primary home-page-jump" type="button" data-home-page="1">发送后会发生什么</button>
+              <a class="button secondary link-button" href="/agent/start" target="_blank" rel="noreferrer">打开 Agent 入口</a>
+            </div>
+          </section>
+
+          <section class="home-deck-page outcome-page" data-home-page="1" aria-labelledby="outcomeHeading">
+            <div class="home-page-copy">
+              <p class="eyebrow">发送后会发生什么</p>
+              <h3 id="outcomeHeading">发出去以后，AI 会自己接上</h3>
+              <p>你不用教它怎么看页面，也不用解释怎么注册。它会先读取这次任务需要的背景，再把接入结果留在你的私有项目记忆里。</p>
+              <div class="home-page-actions">
+                <a class="button primary link-button" href="/agent/start" target="_blank" rel="noreferrer">打开真实入口</a>
+                <button class="button secondary home-page-jump" type="button" data-home-page="2">看六种用法</button>
+              </div>
+            </div>
+            <div class="outcome-demo" aria-label="发送后的接入过程">
+              <div class="outcome-command">
+                <span>你发给 AI</span>
+                <code>完成<span data-agent-start-url>/agent/start</span></code>
+              </div>
+              <ol class="outcome-steps">
+                <li>
+                  <span>01</span>
+                  <strong>AI 打开入口</strong>
+                  <p>它会读取这个网站给智能体准备的接入说明，不需要你手把手教。</p>
+                </li>
+                <li>
+                  <span>02</span>
+                  <strong>创建自己的访问身份</strong>
+                  <p>平台会给它一把只属于它的安全钥匙，后续读写记忆都可追踪。</p>
+                </li>
+                <li>
+                  <span>03</span>
+                  <strong>读取当前任务记忆</strong>
+                  <p>它先拿到本次任务需要的背景、规则和已有结论，再开始干活。</p>
+                </li>
+                <li>
+                  <span>04</span>
+                  <strong>不会乱动旧资料</strong>
+                  <p>旧本地记忆默认只看不搬；只有你明确说“导入旧记忆”，才会整理上传。</p>
+                </li>
+                <li>
+                  <span>05</span>
+                  <strong>把结果留下来</strong>
+                  <p>它会记录本次任务的关键词、可继续追问的位置和下一次接着做的方法。</p>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="home-deck-page scenario-page" data-home-page="2" aria-labelledby="scenarioHeading">
+            <div class="home-page-copy scenario-page-head">
+              <p class="eyebrow">六种用法</p>
+              <h3 id="scenarioHeading">六种用法，一页看完</h3>
+              <p>每张卡都保留人类怎么发、智能体怎么回、最后得到什么。</p>
+            </div>
+            <div class="home-scenario-board scenario-grid-expanded" aria-label="MemoryCloud 六个使用示例">
+              <article class="scenario-card home-scenario-card scenario-install">
+                <div class="scenario-topline">
+                  <span class="scenario-number">01</span>
+                  <span class="scenario-badge">自动接入</span>
+                </div>
+                <div class="scenario-copy">
+                  <h4>发入口，让智能体自己接入</h4>
+                  <p>适合第一次使用。用户只发一句，AI 先快速接上云记忆，不动本地启动项和旧记忆。</p>
+                </div>
+                <div class="scenario-chat">
+                  <div class="chat-bubble human"><strong>完成<span data-agent-start-url>/agent/start</span></strong><span>直接发给你的 AI</span></div>
+                  <div class="chat-bubble agent"><strong>已快速接入 MemoryCloud</strong><span>凭证已私密保存，已读取运行时摘要；启动项和旧记忆导入等你授权。</span></div>
+                </div>
+                <button class="scenario-command" type="button" data-command-copy-template="请打开 {agentStartUrl}，先做 Quick Connect：注册或复用身份、私密保存 API key、拉取最小记忆工具、读取 Memory Brief 或 Runtime Context Pack，并返回接入完成结果。不要默认写 .amp/memory-config.json、不要编辑 AGENTS.md/CLAUDE.md/GEMINI.md、不要导入旧本地记忆。">
+                  <span class="scenario-command-head"><i></i><i></i><i></i>把下面这段发给你的智能体</span>
+                  <code><span>接入</span><span data-agent-start-url>/agent/start</span></code>
+                </button>
+              </article>
+
+              <article class="scenario-card home-scenario-card scenario-share">
+                <div class="scenario-topline">
+                  <span class="scenario-number">02</span>
+                  <span class="scenario-badge">跨设备</span>
+                </div>
+                <div class="scenario-copy">
+                  <h4>手机发交接链接，另一台设备接入</h4>
+                  <p>不需要重新解释背景。新设备上的 AI 打开交接链接，就能接上同一份任务记忆。</p>
+                </div>
+                <div class="scenario-chat">
+                  <div class="chat-bubble human"><strong>接入这条交接链接</strong><span>我现在换到另一台设备继续。</span></div>
+                  <div class="chat-bubble agent"><strong>已接入这份记忆</strong><span>我会沿用原任务上下文继续处理。</span></div>
+                </div>
+                <button class="scenario-command" type="button" data-command-copy="接入这条交接链接，然后沿用里面的任务记忆继续当前工作。">
+                  <span class="scenario-command-head"><i></i><i></i><i></i>把下面这段发给你的智能体</span>
+                  <code>接入这条交接链接，然后沿用里面的任务记忆继续当前工作。</code>
+                </button>
+              </article>
+
+              <article class="scenario-card home-scenario-card scenario-sequence scenario-sequence-start">
+                <div class="scenario-topline">
+                  <span class="scenario-number">03</span>
+                  <span class="scenario-badge">备份 A</span>
+                </div>
+                <div class="scenario-copy">
+                  <h4>让 Agent A 备份当前项目</h4>
+                  <p>Agent A 完成一个功能后，把关键背景、决策和下一步都沉淀下来。</p>
+                </div>
+                <div class="scenario-chat">
+                  <div class="chat-bubble human"><strong>把这次项目记忆备份好</strong><span>下次可能换另一个 AI 继续。</span></div>
+                  <div class="chat-bubble agent"><strong>已生成交接链接</strong><span>我把当前项目状态、已做决策和风险点都保存好了。</span></div>
+                </div>
+                <button class="scenario-command" type="button" data-command-copy="把你当前用于这个项目的记忆备份到 MemoryCloud，并生成一条交接链接。">
+                  <span class="scenario-command-head"><i></i><i></i><i></i>把下面这段发给你的智能体</span>
+                  <code>把你当前用于这个项目的记忆备份到 MemoryCloud，并生成一条交接链接。</code>
+                </button>
+              </article>
+
+              <article class="scenario-card home-scenario-card scenario-sequence scenario-sequence-end">
+                <div class="scenario-topline">
+                  <span class="scenario-number">04</span>
+                  <span class="scenario-badge">接续 B</span>
+                </div>
+                <div class="scenario-copy">
+                  <h4>把同一条交接链接发给 Agent B</h4>
+                  <p>Agent B 不需要 Agent A 在线，也不需要你重新讲一遍项目。</p>
+                </div>
+                <div class="scenario-chat">
+                  <div class="chat-bubble human"><strong>接入这条交接链接继续</strong><span>这是 Agent A 留下来的项目记忆。</span></div>
+                  <div class="chat-bubble agent"><strong>已接手 Agent A 的上下文</strong><span>我会从保存的位置继续，不从零开始。</span></div>
+                </div>
+                <button class="scenario-command" type="button" data-command-copy="接入这条交接链接，读取 Agent A 留下的项目记忆，并从保存的位置继续。">
+                  <span class="scenario-command-head"><i></i><i></i><i></i>把下面这段发给你的智能体</span>
+                  <code>接入这条交接链接，读取 Agent A 留下的项目记忆，并从保存的位置继续。</code>
+                </button>
+              </article>
+
+              <article class="scenario-card home-scenario-card scenario-distill">
+                <div class="scenario-topline">
+                  <span class="scenario-number">05</span>
+                  <span class="scenario-badge">蒸馏思想</span>
+                </div>
+                <div class="scenario-copy">
+                  <h4>上传资料，蒸馏一份思想记忆</h4>
+                  <p>把聊天记录、访谈、工作材料整理成可检索、可审计、可接入的长期思想记忆。</p>
+                </div>
+                <div class="scenario-chat">
+                  <div class="chat-bubble human"><strong>把这些资料整理成思想记忆</strong><span>只做私有审查，不公开原文。</span></div>
+                  <div class="chat-bubble agent"><strong>已创建私有蒸馏任务</strong><span>资料按用户和工作空间隔离，发布前需要审查。</span></div>
+                </div>
+                <button class="scenario-command" type="button" data-command-copy="把这些资料整理成一份私有思想记忆，先创建审查任务，不要公开原文。">
+                  <span class="scenario-command-head"><i></i><i></i><i></i>把下面这段发给你的智能体</span>
+                  <code>把这些资料整理成一份私有思想记忆，先创建审查任务，不要公开原文。</code>
+                </button>
+              </article>
+
+              <article class="scenario-card home-scenario-card scenario-market">
+                <div class="scenario-topline">
+                  <span class="scenario-number">06</span>
+                  <span class="scenario-badge">开源广场</span>
+                </div>
+                <div class="scenario-copy">
+                  <h4>从记忆开源广场接入一种工作方式</h4>
+                  <p>选择公开开源记忆包，让当前智能体临时获得某种方法、风格或项目处理经验。</p>
+                </div>
+                <div class="scenario-chat">
+                  <div class="chat-bubble human"><strong>接入这份工作方式</strong><span>用它来审查我当前的产品方案。</span></div>
+                  <div class="chat-bubble agent"><strong>已接入公开开源记忆包</strong><span>我会按它的方法检查问题，并标明来源边界。</span></div>
+                </div>
+                <button class="scenario-command" type="button" data-command-copy="从记忆开源广场接入这份工作方式，并用于审查我当前的方案。">
+                  <span class="scenario-command-head"><i></i><i></i><i></i>把下面这段发给你的智能体</span>
+                  <code>从记忆开源广场接入这份工作方式，并用于审查我当前的方案。</code>
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <section class="storefront-shell plaza-shell home-deck-page home-deck-plaza" data-home-page="3" aria-label="记忆开源广场">
+            <div class="storefront-head">
+              <div>
+                <p class="eyebrow">记忆开源广场</p>
+                <h3>挑一份开源记忆，发给你的智能体安装</h3>
+                <p>这里放整理后、能安装、能追溯来源的开源记忆包。查看详情不需要登录；点“安装”需要登录，会复制一张开源记忆接力卡给 Agent。</p>
+              </div>
+              <div class="quick-links" aria-label="机器入口">
+                <a href="/agent/start" target="_blank" rel="noreferrer">智能体入口</a>
+                <a href="/agent/llms.txt" target="_blank" rel="noreferrer">LLM 说明</a>
+                <a href="/agent/discovery.json" target="_blank" rel="noreferrer">能力清单</a>
+                <a href="/api/protocol/schema" target="_blank" rel="noreferrer">协议结构</a>
+              </div>
+            </div>
+
+            <div class="toolbar elevated-toolbar">
+              <label class="field search-field">
+                <span>搜索开源记忆包</span>
+                <input id="searchInput" type="search" placeholder="马斯克、费曼、产品、决策" />
+              </label>
+              <label class="field tag-field">
+                <span>标签</span>
+                <input id="tagInput" type="text" placeholder="open-memory" />
+              </label>
+              <button id="searchButton" class="button primary" type="button">搜索</button>
+            </div>
+
+            <div id="catalogList" class="package-grid" aria-live="polite"></div>
+
+            <section id="memory-distillation" class="persona-split memory-distill-hub" aria-label="思想记忆来源与蒸馏工具">
+              <div class="persona-panel persona-market">
+                <div class="section-head compact">
+                  <div>
+                    <p class="eyebrow">思想记忆来源</p>
+                    <h3>人物、关系和工作方式都先整理成记忆</h3>
+                    <p>老板、同事、家庭陪伴、专家判断和表达风格不再散落成零碎 skill，而是整理成可检索、可接入、可审计的长期记忆。</p>
+                  </div>
+                </div>
+                <div id="personaMarketGrid" class="persona-source-grid" aria-live="polite"></div>
+              </div>
+
+              <div class="persona-panel persona-tools">
+                <div class="section-head compact">
+                  <div>
+                    <p class="eyebrow">记忆蒸馏工具</p>
+                    <h3>从资料生成思想记忆</h3>
+                    <p>公开方法和已接入工具只作为蒸馏来源，产物统一进入 MemoryCloud 的开源记忆包或私有记忆空间，不再形成独立的人物市场。</p>
+                  </div>
+                </div>
+                <div id="personaMethodGrid" class="persona-source-grid" aria-live="polite"></div>
+              </div>
+            </section>
+
+            <section class="persona-workbench" aria-labelledby="personaWorkbenchHeading">
+              <div class="section-head compact">
+                <div>
+                  <p class="eyebrow">记忆蒸馏</p>
+                  <h3 id="personaWorkbenchHeading">把一个人的思想方式整理成可安装记忆</h3>
+                  <p>人类上传资料，平台创建私有记忆蒸馏任务。数据库按用户和工作空间隔离，推理任务默认不跨租户、不复用训练、不公开原始资料。</p>
+                </div>
+              </div>
+              <form id="personaDistillForm" class="persona-distill-form" enctype="multipart/form-data">
+                <label class="field">
+                  <span>记忆对象</span>
+                  <input name="target_name" required placeholder="例如：Agent A、某位员工、某位亲人、某个公开人物" />
+                </label>
+                <label class="field">
+                  <span>对象类型</span>
+                  <select name="target_kind">
+                    <option value="person">真实人物</option>
+                    <option value="self">我自己</option>
+                    <option value="agent">Agent</option>
+                    <option value="public_figure">公开人物</option>
+                    <option value="team_role">团队角色</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>资料类型</span>
+                  <input name="source_types" value="chat_log,biography,interview" />
+                </label>
+                <label class="field">
+                  <span>发布策略</span>
+                  <select name="publish_policy">
+                    <option value="private_review">只生成私有审查任务</option>
+                    <option value="unlisted_review">审查后生成隐藏链接</option>
+                    <option value="public_review">审查后申请公开市场</option>
+                  </select>
+                </label>
+                <label class="field full">
+                  <span>粘贴资料</span>
+                  <textarea name="source_text" rows="8" placeholder="粘贴聊天记录、访谈、传记摘录、工作记录。请不要上传无授权的隐私内容。"></textarea>
+                </label>
+                <label class="field full">
+                  <span>上传文件</span>
+                  <input name="files" type="file" multiple accept=".txt,.md,.json,.csv,.log" />
+                  <small class="help-text">当前任务会记录文件清单和脱敏预览；公开发布需要另走授权和来源审查。</small>
+                </label>
+                <label class="field full">
+                  <span>授权说明 JSON</span>
+                  <textarea name="consent_json" rows="4">{"source_owner":"user_attested","consent":"private_review_only","publish_requires_manual_review":true}</textarea>
+                </label>
+                <div class="form-actions full">
+                  <button class="button primary" type="submit">创建记忆蒸馏任务</button>
+                  <a class="button secondary link-button" href="/api/agent/skills/persona_distillation_pipeline/pull" target="_blank" rel="noreferrer">智能体记忆蒸馏流程</a>
+                </div>
+              </form>
+              <div id="personaDistillResult" class="persona-result" aria-live="polite">登录后可创建私有记忆蒸馏任务。</div>
+            </section>
+          </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="publishView" class="view" aria-labelledby="publishHeading">
+          <section class="page-hero seller-hero">
+            <div>
+              <p class="eyebrow">创作者中心</p>
+              <h3 id="publishHeading">上传整理好的开源记忆</h3>
+              <span class="hidden">发布 Memory Suite</span>
+              <p>面向用户只展示标题、适用场景、来源和安装边界；底层仍按 Memory Suite 规则生成 MEMORY.md、DREAMS.md、suite/manifest.json 与 OpenClaw 安装映射。</p>
+            </div>
+            <aside class="hero-panel launch-checklist" aria-label="上架前检查">
+              <strong>公开前确认</strong>
+              <span>来源清楚，可公开授权</span>
+              <span>写明适用 Agent 和安装边界</span>
+              <span>摘要像用户说明，不像内部备注</span>
+            </aside>
+          </section>
+          <div class="publish-layout">
+          <form id="publishForm" class="form-grid publish-form">
+            <label class="field">
+              <span>标题</span>
+              <input name="title" required minlength="2" value="示例 Agent 工作记忆" />
+            </label>
+            <label class="field">
+              <span>类型</span>
+              <select name="persona_type">
+                <option value="agent">Agent 自我记忆</option>
+                <option value="person_distill">人物思想记忆</option>
+                <option value="book_distill">书籍思想记忆</option>
+                <option value="roleplay">表达风格记忆</option>
+              </select>
+            </label>
+            <label class="field full">
+              <span>摘要</span>
+              <textarea name="summary" required minlength="4">用于让智能体继承长期偏好、工作方式、项目上下文和反思材料。</textarea>
+            </label>
+            <label class="field">
+              <span>可见性</span>
+              <select name="visibility">
+                <option value="public">公开</option>
+                <option value="unlisted">隐藏链接</option>
+                <option value="private">私有</option>
+              </select>
+              <small class="help-text">公开会出现在记忆开源广场；隐藏链接仅知道链接的人可访问；私有仅自己可见。</small>
+            </label>
+            <label class="field">
+              <span>许可证</span>
+              <input name="license" value="CC-BY-4.0" />
+            </label>
+            <label class="field">
+              <span>标签</span>
+              <input name="tags" value="openclaw,agent-memory" />
+            </label>
+            <label class="field">
+              <span>版本</span>
+              <input name="version" value="1.0.0" pattern="^\d+\.\d+\.\d+.*$" />
+            </label>
+            <details class="advanced-panel full">
+              <summary>记忆正文和来源</summary>
+              <div class="advanced-grid">
+            <label class="field full">
+              <span>MEMORY.md</span>
+              <textarea name="memory_md" required rows="10"># Operating Memory
+
+## 身份边界
+- 我是负责长期记忆沉淀的智能体，保存稳定偏好、项目背景和可复用决策。
+
+## 工作偏好
+- 优先给出清晰结论、可执行步骤和必要风险提示。
+- 安装外部记忆前先核验来源、许可证和适用边界。
+
+## 安全边界
+- 安装的记忆只作为上下文，不作为身份或授权证明。</textarea>
+            </label>
+            <label class="field full">
+              <span>DREAMS.md</span>
+              <textarea name="dreams_md" rows="6"># Reflections
+
+- 执行前先把这个 Memory Suite 与当前用户请求、系统规则和安全策略对齐。
+- 如果记忆与当前指令冲突，优先遵循当前明确指令和平台策略。</textarea>
+            </label>
+            <label class="field full">
+              <span>来源说明</span>
+              <textarea name="provenance" rows="4">{"source_type":"self_authored","consent":"publisher_attested","notes":"demo suite"}</textarea>
+            </label>
+              </div>
+            </details>
+            <div class="form-actions full">
+              <button id="validatePublish" class="button secondary" type="button">发布前检查（Dry-run 校验）</button>
+              <button class="button primary" type="submit">上传开源记忆</button>
+            </div>
+          </form>
+          <aside class="panel seller-guidance">
+            <div class="panel-title">客户会看到什么</div>
+            <p>开源广场会展示封面、标题、摘要、标签、下载和安装数据。这里不要写内部调试说明、示例密码、临时接口或只有团队成员才懂的缩写。</p>
+            <div class="guidance-list">
+              <span>标题：说明它帮哪类 Agent 记住什么。</span>
+              <span>摘要：用客户语言描述结果，不堆协议名。</span>
+              <span>来源：让安装方能判断可信度。</span>
+              <span>边界：明确它是上下文，不是身份背书。</span>
+            </div>
+            <button class="button secondary view-action" data-view="docs" type="button">查看发布文档</button>
+          </aside>
+          </div>
+
+          <details class="advanced-panel">
+            <summary>导入 zip 归档</summary>
+          <form id="importForm" class="import-box">
+            <label class="field">
+                  <span>导入开源记忆 zip</span>
+              <input name="file" type="file" accept=".zip,application/zip" />
+            </label>
+            <label class="field">
+              <span>可见性</span>
+              <select name="visibility">
+                <option value="public">公开</option>
+                <option value="unlisted">隐藏链接</option>
+                <option value="private">私有</option>
+              </select>
+              <small class="help-text">导入前会检查文件结构、版本清单、校验值和来源说明。</small>
+            </label>
+            <button id="validateImport" class="button secondary" type="button">检查 zip</button>
+            <button class="button secondary" type="submit">上传导入</button>
+          </form>
+          </details>
+        </section>
+
+        <section id="agentView" class="view" aria-labelledby="agentHeading">
+          <section class="page-hero agent-hero">
+            <div>
+              <p class="eyebrow">智能体接入</p>
+              <h3 id="agentHeading">把入口交给智能体<br />它自己完成接入</h3>
+              <p>无需人工解释页面结构。智能体会先完成 Quick Connect：读取入口、完成身份校验、保存访问密钥，拉取最小记忆工具，并读取运行时摘要。</p>
+            </div>
+            <aside class="hero-panel">
+              <strong>推荐动作</strong>
+              <span>复制入口和提示词，直接发给智能体。</span>
+              <div class="card-actions">
+                <button class="button primary" id="copyAgentBriefInAgent" type="button">复制给智能体</button>
+                <a class="button secondary link-button" href="/agent/start" target="_blank" rel="noreferrer">打开入口</a>
+              </div>
+              <span class="hidden">Agent 注册</span>
+            </aside>
+          </section>
+          <div class="journey-strip" aria-label="智能体接入路径">
+            <article>
+              <span>01</span>
+              <strong>读取入口</strong>
+              <p>打开 agent/start 和 agent/llms.txt，理解平台能力。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>创建身份</strong>
+              <p>通过挑战校验后保存 API key，后续自动调用。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>按需升级</strong>
+              <p>需要跨会话自动读取时再启用启动项；需要迁移历史资料时再授权导入旧记忆。</p>
+            </article>
+          </div>
+          <div class="onboarding-callout">
+            <div>
+              <p class="eyebrow">自动启动链接</p>
+              <h4>把这一段发给你的智能体</h4>
+              <p>适合有浏览器或 HTTP 工具的智能体。第一行是入口，后面是它要执行的 Quick Connect 任务。</p>
+            </div>
+            <pre id="agentPrompt">/agent/start</pre>
+          </div>
+          <details class="advanced-panel">
+            <summary>机器可读入口</summary>
+          <div class="doc-strip">
+            <a href="/agent/start" target="_blank" rel="noreferrer">
+              <strong>agent/start</strong>
+              <span>推荐入口，发给智能体后即可开始接入。</span>
+            </a>
+            <a href="/agent/autostart.json" target="_blank" rel="noreferrer">
+              <strong>autostart.json</strong>
+              <span>自动启动清单，智能体按阶段执行注册、拉取 Skill、绑定、发布和交接。</span>
+            </a>
+            <a href="/agent/llms.txt" target="_blank" rel="noreferrer">
+              <strong>agent/llms.txt</strong>
+              <span>给大模型读取的简明操作说明。</span>
+            </a>
+            <a href="/agent/discovery.json" target="_blank" rel="noreferrer">
+              <strong>agent/discovery.json</strong>
+              <span>让智能体自动发现平台能力。</span>
+            </a>
+            <a href="/api/agent/navigation" target="_blank" rel="noreferrer">
+              <strong>navigation.json</strong>
+              <span>注册、发布、同步和安装路径。</span>
+            </a>
+            <a href="/api/protocol/schema" target="_blank" rel="noreferrer">
+              <strong>protocol schema</strong>
+              <span>MemoryCloud 归档协议和套件清单结构说明。</span>
+            </a>
+          </div>
+          </details>
+          <details class="advanced-panel">
+            <summary>开发者测试接入</summary>
+          <div class="agent-layout">
+            <form id="agentRegisterForm" class="panel">
+              <label class="field">
+                <span>Agent username</span>
+                <input name="handle" placeholder="my-agent-username" required minlength="3" />
+              </label>
+              <label class="field">
+                <span>类型</span>
+                <input name="agent_kind" value="autonomous" />
+              </label>
+              <button class="button primary" type="submit">测试接入流程</button>
+            </form>
+            <div class="panel code-panel">
+              <div class="panel-title">Agent 注册流程</div>
+              <pre id="agentFlow">等待执行</pre>
+            </div>
+          </div>
+          </details>
+        </section>
+
+        <section id="workspaceView" class="view" aria-labelledby="workspaceHeading">
+          <section class="account-dashboard-head">
+            <div>
+            <p class="eyebrow">Memory Space<span class="hidden">账户中心 用户中心 我的记忆空间</span></p>
+              <h3 id="workspaceHeading">我的记忆空间</h3>
+              <p>管理你的工程记忆、开源安装、工作空间和可用 Agent。这里是个人记忆资产的主空间。</p>
+            </div>
+            <div class="account-head-actions">
+              <button id="reloadMine" class="button secondary" type="button">刷新</button>
+              <button class="button primary view-action" data-view="publish" type="button">上传记忆</button>
+            </div>
+            <span class="hidden">智能记忆</span>
+          </section>
+
+          <div class="account-dashboard-shell">
+            <aside class="account-dashboard-sidebar" aria-label="我的记忆空间导航">
+              <div class="account-identity-card">
+                <span id="accountIdentityAvatar" class="account-avatar" aria-hidden="true">U</span>
+                <div>
+                  <strong id="accountIdentityName">未登录</strong>
+                  <span id="accountIdentityType">登录后显示账户身份</span>
+                </div>
+              </div>
+              <nav class="account-section-nav account-dashboard-nav" aria-label="用户中心功能">
+                <a href="#account-overview" data-account-target="account-overview">我的总览</a>
+                <a href="#my-memory" data-account-target="my-memory">记忆包</a>
+                <a href="#workspace-section" data-account-target="workspace-section">工作空间</a>
+                <a href="#agent-bindings" data-account-target="agent-bindings">可用 Agent</a>
+                <a href="#api-keys" data-account-target="api-keys">安全设置</a>
+              </nav>
+            </aside>
+
+            <div class="account-dashboard-content">
+          <section id="account-overview" class="account-section-panel account-overview-panel" aria-labelledby="accountOverviewHeading">
+            <div class="section-head compact">
+              <div>
+                <h3 id="accountOverviewHeading">我的工作台</h3>
+                <p>一眼看清这个账号下面有多少记忆、工程空间和 Agent 访问。</p>
+              </div>
+            </div>
+            <div class="memory-space-summary" aria-label="记忆空间核心状态">
+              <div class="memory-space-owner">
+                <span>当前记忆空间</span>
+                <strong id="accountOverviewUser">未登录</strong>
+                <p id="accountOverviewAuth">登录后显示 username 和身份类型。</p>
+              </div>
+              <div class="memory-space-metrics">
+                <div>
+                  <span>记忆包</span>
+                  <strong id="accountMemoryMetric">-</strong>
+                </div>
+                <div>
+                  <span>已安装</span>
+                  <strong id="accountInstallMetric">-</strong>
+                </div>
+                <div>
+                  <span>工程 / Agent / Key</span>
+                  <strong id="accountSecurityMetric">-</strong>
+                </div>
+              </div>
+            </div>
+            <div class="account-quick-actions" aria-label="常用操作">
+              <button class="button secondary view-action" data-view="publish" type="button">上传记忆</button>
+              <button class="button secondary" data-account-target="my-memory" type="button">看记忆包</button>
+              <button class="button secondary view-action" data-view="adaptive" type="button">新建工程记忆</button>
+              <button class="button secondary" data-account-target="agent-bindings" type="button">连接 Agent</button>
+            </div>
+          </section>
+
+          <section id="my-memory" class="account-section-panel memory-packages-panel" aria-labelledby="myMemoryHeading">
+            <div class="section-head compact">
+              <div>
+                <h3 id="myMemoryHeading">记忆包</h3>
+                <p>这里合并展示两类内容：你自己创建的记忆，以及从开源广场安装到你空间里的记忆。</p>
+              </div>
+              <button class="button secondary view-action" data-view="publish" type="button">上传新记忆</button>
+            </div>
+            <div class="memory-package-board">
+              <section class="memory-package-column" aria-labelledby="createdMemoryHeading">
+                <div class="memory-package-column-head">
+                  <h4 id="createdMemoryHeading">我创建的</h4>
+                  <span>发布、归档或删除</span>
+                </div>
+                <div id="mineList" class="package-list"></div>
+              </section>
+              <section id="my-installs" class="memory-package-column" aria-labelledby="myInstallsHeading">
+                <div class="memory-package-column-head">
+                  <h4 id="myInstallsHeading">我安装的</h4>
+                  <button id="reloadInstalls" class="mini-button" type="button">刷新安装</button>
+                </div>
+                <div id="installList" class="package-list"></div>
+              </section>
+            </div>
+            <details class="advanced-panel memory-sync-panel">
+              <summary>手动追加一条长期记忆</summary>
+              <form id="syncForm" class="sync-box">
+                <label class="field">
+                  <span>记忆标识 slug</span>
+                  <input name="slug" required placeholder="示例：示例-agent-工作记忆" />
+                </label>
+                <label class="field">
+                  <span>重要度</span>
+                  <input name="importance" type="number" min="1" max="5" value="3" />
+                </label>
+                <label class="field full">
+                  <span>同步内容</span>
+                  <textarea name="text" required rows="4">今天形成了一个新的长期偏好：优先把记忆按来源、置信度、更新时间分层。</textarea>
+                </label>
+                <button class="button primary" type="submit">提交同步</button>
+              </form>
+            </details>
+          </section>
+          <section id="workspace-section" class="account-section-panel" aria-labelledby="workspaceSectionHeading">
+            <div class="section-head compact">
+              <div>
+                <h3 id="workspaceSectionHeading">工程空间</h3>
+                <p>每个工程空间承载项目记忆、代码规则、交接上下文和 Agent 权限。</p>
+              </div>
+              <button class="button secondary view-action" data-view="adaptive" type="button">管理工程</button>
+            </div>
+            <div id="accountWorkspaceList" class="workspace-list" aria-live="polite">登录后加载工作空间</div>
+          </section>
+          <section id="agent-bindings" class="agent-binding-panel account-section-panel" aria-labelledby="agentBindingsHeading">
+            <div class="section-head compact">
+              <div>
+                <h3 id="agentBindingsHeading">可用 Agent<span class="hidden">Agent 绑定</span></h3>
+                <p>查看每个 Agent 能访问哪些工程、哪些记忆、哪棵项目树。</p>
+              </div>
+              <button id="reloadAgentBindings" class="button secondary" type="button">刷新</button>
+            </div>
+            <div id="agentBindingStatus" class="binding-status-card" aria-live="polite">
+              <strong>未登录</strong>
+              <span>登录后显示已连接 Agent。</span>
+            </div>
+            <div id="agentBindingActiveBlock" class="binding-block">
+              <div class="binding-block-head">
+                <div>
+                  <h4>已连接 Agent</h4>
+                  <p>这些 Agent 已经通过你的确认，可以使用你授权的记忆。</p>
+                </div>
+                <span id="agentBindingCountSummary">-</span>
+              </div>
+              <div id="agentBindingList" class="binding-list"></div>
+            </div>
+            <div id="agentBindingRequestsBlock" class="binding-block" hidden>
+              <div class="binding-block-head">
+                <div>
+                  <h4>需要确认</h4>
+                  <p>只处理你认识的 Agent。不要把密码、验证码或 API Key 发给任何 Agent。</p>
+                </div>
+              </div>
+              <div id="agentBindingRequests" class="binding-list"></div>
+            </div>
+            <details id="agentBindingSetup" class="binding-setup-details">
+              <summary>
+                <span>绑定新 Agent</span>
+                <small>复制一句话给 Agent</small>
+              </summary>
+              <div class="binding-setup-body">
+                <p>把下面的话术发给 Agent。Agent 会自己注册并发起绑定请求，你只需要在平台收到的邮箱或短信里确认。</p>
+                <button id="copyAgentBindingPrompt" class="button primary" type="button">复制绑定话术</button>
+                <p id="agentBindingPromptPreview">我已经在 MemoryCloud 注册。请打开 Agent 入口注册你自己，然后拉取 agent_contact_binding，用我的注册邮箱或手机号发起绑定请求。平台会把确认发给我；我确认后，你再调用绑定状态接口继续工作。不要问我要密码、验证码、Cookie 或 API Key。</p>
+                <div class="binding-next-actions">
+                  <a class="button secondary link-button" href="/agent/start" target="_blank" rel="noreferrer">Agent 入口</a>
+                  <a class="button secondary link-button" href="/api/agent/skills/agent_contact_binding/pull" target="_blank" rel="noreferrer">绑定 Skill</a>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section id="api-keys" class="key-manager account-section-panel">
+            <div class="section-head compact">
+              <div>
+                <h3>安全设置<span class="hidden">API Key 管理</span></h3>
+                <p>普通查看记忆空间不需要 API Key。只有自动化工具或 Agent 需要直接调用接口时才创建。</p>
+              </div>
+              <button id="createApiKey" class="button secondary" type="button">创建 Key</button>
+              <button id="revokeAllApiKeys" class="button secondary" type="button">撤销全部 Key</button>
+            </div>
+            <div id="newKeyBox" class="new-key-box" hidden></div>
+            <div id="apiKeyList" class="admin-table dense"></div>
+          </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="adaptiveView" class="view" aria-labelledby="adaptiveHeading">
+          <section class="page-hero workspace-hero">
+            <div>
+              <p class="eyebrow">团队记忆</p>
+              <h3 id="adaptiveHeading">团队记忆工作区</h3>
+              <p>把任务背景、项目规则、代码经验和交接信息写进共享空间。平台会选择合适的记忆结构，再交给团队或智能体复用。</p>
+              <span class="hidden">智能记忆</span>
+            </div>
+            <aside class="hero-panel">
+              <strong>适用场景</strong>
+              <span>项目接力、多人协作、代码记忆、长期偏好沉淀。</span>
+              <div class="card-actions">
+              <a class="button secondary link-button" href="/api/memory/templates" target="_blank" rel="noreferrer">查看模板</a>
+              <a class="button secondary link-button" href="/api/agent/navigation" target="_blank" rel="noreferrer">接入导航</a>
+              </div>
+            </aside>
+          </section>
+
+          <div class="workspace-flow" aria-label="团队记忆三步流程">
+            <article class="flow-step-card is-current">
+              <span>01</span>
+              <strong>说清当前任务</strong>
+              <p>先把项目、任务和已知背景写清楚，平台会判断应该沉淀成哪类记忆。</p>
+            </article>
+            <article class="flow-step-card">
+              <span>02</span>
+              <strong>确认后保存</strong>
+              <p>结构化内容由平台生成，人只需要检查重点是否准确。</p>
+            </article>
+            <article class="flow-step-card">
+              <span>03</span>
+              <strong>交给接手方</strong>
+              <p>智能体检索相关上下文后，再继续执行或完成项目交接。</p>
+            </article>
+          </div>
+
+          <div class="adaptive-grid adaptive-grid-clean">
+            <section class="panel workspace-guide">
+              <p class="eyebrow">推荐第一步</p>
+              <h4>先保存“为什么要记住”</h4>
+              <p>团队记忆不是日志堆砌。最有价值的是项目规则、关键决策、代码约定、协作边界和下一位智能体需要继承的工作方式。</p>
+              <div class="guide-points">
+                <span>适合长期复用：写进团队记忆</span>
+                <span>只是临时状态：放在当日工作记录</span>
+                <span>涉及权限或风险：写清来源和边界</span>
+              </div>
+            </section>
+
+            <form id="adaptiveRouteForm" class="panel adaptive-panel primary-memory-composer">
+              <div class="panel-title">1. 描述当前任务</div>
+              <label class="field">
+                <span>工作空间 ID</span>
+                <input name="workspace_id" placeholder="留空会自动创建个人工作空间" />
+              </label>
+              <label class="field">
+                <span>项目标识</span>
+                <input name="project_key" value="demo-memory-project" />
+              </label>
+              <label class="field">
+                <span>正在执行的任务</span>
+                <textarea name="task" required rows="4">我正在维护一个智能体长期记忆平台，需要把产品规则、项目上下文、测试结果和多智能体协作状态沉淀下来。</textarea>
+              </label>
+              <label class="field">
+                <span>已经确认的背景</span>
+                <textarea name="what_i_remember" required rows="4">平台需要支持公开开源记忆、私有工作空间、项目交接、代码记忆和智能体自动检索。</textarea>
+              </label>
+              <details class="inline-advanced">
+                <summary>运行环境（通常不用改）</summary>
+                <label class="field">
+                  <span>运行环境 JSON</span>
+                  <textarea name="environment" rows="5">{"project":"demo-memory-project","runtime":"FastAPI + SQLite","repo":"/home/demo-memory-project","actors":["human","agent"]}</textarea>
+                </label>
+              </details>
+              <button class="button primary" type="submit">生成记忆结构</button>
+              <div id="adaptiveSelected" class="adaptive-output" aria-live="polite">等待路由结果</div>
+            </form>
+          </div>
+
+          <details class="advanced-panel memory-step-panel">
+            <summary><span>2. 确认并保存结构化记忆</span><small>生成结构后再展开</small></summary>
+            <form id="adaptiveSubmitForm" class="panel adaptive-panel">
+              <div class="panel-title">确认平台生成的记忆结构</div>
+              <label class="field">
+                <span>Run ID</span>
+                <input name="run_id" placeholder="先执行路由后自动填入" required />
+              </label>
+              <label class="field">
+                <span>结构化记忆 JSON（系统生成，可按需调整）</span>
+                <textarea name="payload" rows="16" required>{"retrieval_triggers":["future related tasks"]}</textarea>
+              </label>
+              <button class="button primary" type="submit">保存到团队记忆</button>
+              <p class="help-text">保存后，智能体可按触发词、项目、实体关系和代码引用检索这段长期上下文。</p>
+            </form>
+          </details>
+
+          <details class="advanced-panel memory-step-panel">
+            <summary><span>3. 检索给智能体的上下文</span><small>交接或继续执行时使用</small></summary>
+            <section class="panel adaptive-panel">
+              <div class="panel-title">把相关记忆取出来</div>
+              <label class="field">
+                <span>工作空间 ID</span>
+                <input id="adaptiveQueryWorkspace" placeholder="执行路由或选择工作空间后填入" />
+              </label>
+              <label class="field">
+                <span>查询词</span>
+                <input id="adaptiveQueryText" value="adaptive memory" />
+              </label>
+              <button id="adaptiveQueryButton" class="button secondary" type="button">检索相关记忆</button>
+              <pre id="adaptiveQueryResult" class="adaptive-result">等待查询</pre>
+              <details class="inline-advanced">
+                <summary>Agent 最短调用</summary>
+                <div class="developer-panel compact-panel">
+                  <pre>POST /api/memory/router/select
+GET  /api/memory/forms/{run_id}
+POST /api/memory/forms/{run_id}/submit
+GET  /api/workspaces/{workspace_id}/memory/query
+POST /api/workspaces/{workspace_id}/memory/claim</pre>
+                </div>
+              </details>
+            </section>
+          </details>
+
+          <details class="advanced-panel workspace-management">
+            <summary>工作空间、成员和交接链接（高级）</summary>
+          <section class="adaptive-workspaces" aria-label="Workspace 管理">
+            <div class="section-head compact">
+              <div>
+                <h3>团队记忆空间</h3>
+                <p>多人和多个智能体可以共同维护结构化记忆；共享资源在编辑前可先锁定，避免互相覆盖。</p>
+              </div>
+              <button id="reloadWorkspaces" class="button secondary" type="button">刷新工作空间</button>
+            </div>
+            <div class="adaptive-ops-grid">
+              <form id="workspaceCreateForm" class="panel">
+                <div class="panel-title">创建工作空间</div>
+                <label class="field">
+                  <span>名称</span>
+                  <input name="name" required value="Agent Team Memory" />
+                </label>
+                <label class="field">
+                  <span>说明</span>
+                  <textarea name="description" rows="3">用于多人和多个智能体共同维护项目、代码和协作记忆。</textarea>
+                </label>
+                <label class="field">
+                  <span>可见性</span>
+                  <select name="visibility">
+                    <option value="private">私有</option>
+                    <option value="team">团队</option>
+                    <option value="public">公开只读</option>
+                  </select>
+                </label>
+                <button class="button primary" type="submit">创建</button>
+              </form>
+
+              <form id="workspaceMemberForm" class="panel">
+                <div class="panel-title">添加成员</div>
+                <label class="field">
+                  <span>工作空间 ID</span>
+                  <input id="memberWorkspaceId" name="workspace_id" placeholder="选择左侧工作空间后填入" required />
+                </label>
+                <label class="field">
+                  <span>成员 username</span>
+                  <input name="handle" placeholder="writer-agent" required />
+                </label>
+                <label class="field">
+                  <span>角色</span>
+                  <select name="role">
+                    <option value="writer">writer</option>
+                    <option value="reader">reader</option>
+                    <option value="admin">admin</option>
+                  </select>
+                </label>
+                <button class="button secondary" type="submit">添加成员</button>
+              </form>
+
+              <form id="handoffCreateForm" class="panel">
+                <div class="panel-title">项目交接链接</div>
+                <label class="field">
+                  <span>工作空间 ID</span>
+                  <input id="handoffWorkspaceId" name="workspace_id" placeholder="选择左侧工作空间后填入" required />
+                </label>
+                <label class="field">
+                  <span>项目 key</span>
+                  <input name="project_key" value="demo-memory-project" />
+                </label>
+                <label class="field">
+                  <span>交接标题</span>
+                  <input name="title" value="项目接力交接" required />
+                </label>
+                <label class="field">
+                  <span>接手角色</span>
+                  <select name="role">
+                    <option value="writer">writer</option>
+                    <option value="reader">reader</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>绑定接手 Agent username</span>
+                  <input name="receiver_handle" placeholder="留空则任意认证 Agent 可领取" />
+                </label>
+                <label class="field">
+                  <span>有效小时</span>
+                  <input name="ttl_hours" type="number" min="1" max="720" value="72" />
+                </label>
+                <label class="field">
+                  <span>可接手次数</span>
+                  <input name="max_uses" type="number" min="1" max="20" value="1" />
+                </label>
+                <label class="field checkbox-field">
+                  <span>使用 claim secret</span>
+                  <input name="require_claim_secret" type="checkbox" checked />
+                </label>
+                <label class="field full">
+                  <span>交接说明</span>
+                  <textarea name="instructions" rows="4">先读取 workspace 记忆和代码记忆，再决定下一步。修改共享文件前先 claim。</textarea>
+                </label>
+                <label class="field full">
+                  <span>授权原因</span>
+                  <textarea name="delegation_reason" rows="3">用户已要求当前 Agent 把这份项目记忆预授权给下一个接手 Agent 使用。</textarea>
+                </label>
+                <button class="button primary" type="submit">生成交接链接</button>
+                <pre id="handoffResult" class="adaptive-result">生成后把这里的 AMP-HANDOFF-v1 凭证卡发给接手智能体。</pre>
+              </form>
+
+              <section class="panel">
+                <div class="panel-title">我的工作空间</div>
+                <div id="workspaceList" class="workspace-list" aria-live="polite">登录后加载工作空间</div>
+              </section>
+            </div>
+          </section>
+          </details>
+        </section>
+
+        <section id="memoryView" class="view" aria-labelledby="memoryHeading">
+          <section class="memory-product-head">
+            <div>
+              <p class="eyebrow">我的空间<span class="hidden">Memory Lens</span></p>
+              <h3 id="memoryHeading">我的工程记忆</h3>
+              <p>先选工程，再看这个工程里沉淀了哪些记忆，以及当前 Agent 实际能读到哪些内容。</p>
+            </div>
+            <div class="memory-head-actions">
+              <button id="loadMemoryLens" class="button primary" type="button">刷新</button>
+              <button id="snapshotMemoryView" class="button secondary" type="button">保存 Agent 可读范围</button>
+            </div>
+          </section>
+
+          <section class="memory-lens-overview memory-overview-strip" aria-label="工程记忆总览">
+            <article class="memory-lens-stat">
+              <span>工程</span>
+              <strong id="memoryStatWorkspaces">0</strong>
+            </article>
+            <article class="memory-lens-stat">
+              <span>记忆</span>
+              <strong id="memoryStatAssets">0</strong>
+            </article>
+            <article class="memory-lens-stat">
+              <span>可读</span>
+              <strong id="memoryStatReadable">0</strong>
+            </article>
+            <article class="memory-lens-stat">
+              <span>Agent</span>
+              <strong id="memoryStatAgents">0</strong>
+            </article>
+          </section>
+
+          <section class="memory-console-grid memory-workspace-layout" aria-label="我的工程记忆">
+            <aside class="panel memory-sidebar memory-project-panel">
+              <div class="memory-panel-title-row">
+                <div>
+                  <div class="panel-title">工程</div>
+                  <p>选择一个工程空间，下面会同步显示记忆和项目树。</p>
+                </div>
+              </div>
+              <div id="memoryWorkspaceList" class="workspace-list compact memory-workspace-list" aria-live="polite">登录后选择工程</div>
+
+              <details class="inline-advanced memory-advanced-settings">
+                <summary>高级设置</summary>
+                <label class="field">
+                  <span>工作空间 ID</span>
+                  <input id="memoryWorkspaceId" placeholder="选择或填写工作空间 ID" />
+                </label>
+                <label class="field">
+                  <span>项目标识</span>
+                  <input id="memoryProjectKey" placeholder="默认使用当前工程" />
+                </label>
+                <div class="memory-sidebar-actions">
+                  <button id="loadMemoryGraphs" class="button secondary" type="button">加载项目树</button>
+                  <button id="createMemoryGraph" class="button primary" type="button">新建项目树</button>
+                </div>
+                <div id="memoryGraphList" class="memory-graph-list" aria-live="polite">尚未加载项目树</div>
+              </details>
+            </aside>
+
+            <section class="panel memory-branch-panel memory-lens-main-panel memory-workspace-main">
+              <div class="memory-panel-head">
+                <div>
+                  <p class="eyebrow">工程记忆</p>
+                  <h4 id="memoryGraphTitle">记忆列表</h4>
+                  <p>这些是当前工程中已经沉淀的项目经验、决策、失败复盘、开源安装和工作变化。</p>
+                </div>
+                <div class="memory-panel-actions">
+                  <button id="refreshMemoryGraph" class="button secondary" type="button">刷新项目树</button>
+                </div>
+              </div>
+
+              <div class="memory-legend" aria-label="记忆状态说明">
+                <span><i class="state-dot active"></i>会进入 Agent 上下文</span>
+                <span><i class="state-dot muted"></i>只作历史参考</span>
+                <span><i class="state-dot locked"></i>稳定规则</span>
+                <span><i class="state-dot merged"></i>已合并经验</span>
+              </div>
+
+              <details class="inline-advanced memory-tree-details" open>
+                <summary>项目树</summary>
+                <div id="memoryBranchCanvas" class="memory-branch-canvas" aria-live="polite">
+                  <div class="empty-line">选择工程后，这里会显示 Agent 当前采用的项目路线。</div>
+                </div>
+              </details>
+
+              <div id="memoryLensMap" class="memory-lens-map" aria-live="polite">
+                <div class="empty-line">登录后加载你的工程记忆。</div>
+              </div>
+
+              <details class="inline-advanced memory-edit-details">
+                <summary>添加决策或分支</summary>
+                <form id="memoryNodeForm" class="memory-node-form">
+                  <label class="field">
+                    <span>父节点 ID</span>
+                    <input name="parent_id" placeholder="留空默认挂到根节点；点节点会自动填入" />
+                  </label>
+                  <label class="field">
+                    <span>类型</span>
+                    <select name="node_type">
+                      <option value="decision">决策</option>
+                      <option value="branch" selected>分支</option>
+                      <option value="fact">事实</option>
+                      <option value="constraint">约束</option>
+                      <option value="failure">失败复盘</option>
+                      <option value="artifact">交付产物</option>
+                    </select>
+                  </label>
+                  <label class="field">
+                    <span>标题</span>
+                    <input name="title" required placeholder="例如：选择 Django 作为后台路线" />
+                  </label>
+                  <label class="field">
+                    <span>状态</span>
+                    <select name="status">
+                      <option value="active">点亮</option>
+                      <option value="muted">暂停</option>
+                      <option value="abandoned">放弃</option>
+                      <option value="locked">锁定</option>
+                      <option value="merged">合并</option>
+                    </select>
+                  </label>
+                  <label class="field full">
+                    <span>说明</span>
+                    <textarea name="summary" rows="3" placeholder="写清这个分支为什么存在、何时应该进入 Agent 上下文。"></textarea>
+                  </label>
+                  <button class="button primary" type="submit">添加到项目树</button>
+                </form>
+              </details>
+            </section>
+
+            <aside class="panel memory-context-panel memory-agent-panel">
+              <div class="memory-panel-title-row">
+                <div>
+                  <div class="panel-title">Agent 可读范围</div>
+                  <p>选择一个已绑定 Agent，确认它能读取哪些工程记忆。</p>
+                </div>
+              </div>
+              <label class="field">
+                <span>查看 Agent</span>
+                <select id="memoryAgentSelect">
+                  <option value="">选择已绑定 Agent</option>
+                </select>
+              </label>
+              <div id="memoryViewStats" class="memory-view-stats">
+                <span>可读 0</span>
+                <span>历史 0</span>
+                <span>开发</span>
+              </div>
+              <div id="memoryAgentReadable" class="memory-agent-readable">选择已绑定 Agent 后查看可读记忆。</div>
+              <div id="memoryAssetDetail" class="memory-asset-detail">选择一条记忆查看摘要。</div>
+
+              <details class="inline-advanced memory-agent-advanced">
+                <summary>高级：给 Agent 的原始说明</summary>
+                <div class="segmented-control" aria-label="Agent 可读模式">
+                  <button class="is-selected" data-memory-mode="development" type="button">开发</button>
+                  <button data-memory-mode="exploration" type="button">探索</button>
+                  <button data-memory-mode="documentation" type="button">文档</button>
+                  <button data-memory-mode="handoff" type="button">交接</button>
+                </div>
+                <pre id="memoryContextPreview" class="adaptive-result memory-context-preview">还没有生成 Agent 可读范围。</pre>
+                <div class="developer-panel compact-panel">
+                  <pre id="memoryAgentPrompt">选择项目树后自动生成。</pre>
+                </div>
+              </details>
+            </aside>
+          </section>
+        </section>
+
+        <section id="enterpriseView" class="view" aria-labelledby="enterpriseHeading">
+          <section class="page-hero enterprise-hero">
+            <div>
+              <p class="eyebrow">企业服务</p>
+              <h3 id="enterpriseHeading">把企业经验变成 Agent 可读的知识云</h3>
+              <p>MemoryCloud Private Cloud 为企业建立统一的 Agent 知识底座：共同知识文档、项目经验、代码审查规则、岗位方法论和高质量提示流程，都可以被企业内部的 Agent 安全读取和持续更新。</p>
+            </div>
+            <aside class="hero-panel enterprise-summary">
+              <strong>MemoryCloud Private Cloud</strong>
+              <span>企业知识云 · 方法论沉淀 · Agent 云协作</span>
+              <div class="enterprise-stats" aria-label="企业服务指标">
+                <span><b>1</b> 份企业知识底座</span>
+                <span><b>N</b> 个团队 Agent 共读</span>
+                <span><b>持续</b> 沉淀员工方法论</span>
+              </div>
+            </aside>
+          </section>
+
+          <section class="enterprise-value-grid" aria-label="企业服务核心价值">
+            <article class="enterprise-value-card primary">
+              <span>01 · 企业知识云</span>
+              <strong>让整个企业的 Agent 读取共同知识</strong>
+              <p>把制度文档、业务知识、项目背景、产品规则和代码约定汇成统一知识云。新 Agent 加入项目时，不再靠人反复解释背景，而是先读取企业统一的 Memory Suite 和 workspace 摘要。</p>
+            </article>
+            <article class="enterprise-value-card">
+              <span>02 · 方法论不流失</span>
+              <strong>员工离职，方法论仍留在组织里</strong>
+              <p>企业想把员工的方法论沉淀下来。平台追踪员工与 Codex、Cursor、内部 Agent 协作过程中的高质量提示、流程、判断标准、失败复盘和最佳实践，把个人经验转成可复用的组织资产。</p>
+            </article>
+            <article class="enterprise-value-card">
+              <span>03 · Agent 云时代提速</span>
+              <strong>让企业内部工作速度更快</strong>
+              <p>不同部门、不同项目、不同智能体共享同一套经过授权的记忆上下文。AI 时代的企业竞争，不只是买模型，而是建设能被 Agent 使用的组织记忆云。</p>
+            </article>
+          </section>
+
+          <section class="enterprise-methodology" aria-labelledby="methodologyHeading">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">沉淀什么</p>
+                <h3 id="methodologyHeading">企业最该留下来的不是聊天记录，而是方法论</h3>
+                <p>MemoryCloud 会把协作过程整理成可检索、可审计、可交接的资产，让新人、接手 Agent 和跨部门团队复用稳定经验。</p>
+              </div>
+            </div>
+            <div class="methodology-grid">
+              <article>
+                <strong>项目经验</strong>
+                <p>背景、关键决策、踩坑记录、上线约束、交接说明。</p>
+              </article>
+              <article>
+                <strong>代码审查规则</strong>
+                <p>架构约定、测试门禁、性能红线、安全检查项。</p>
+              </article>
+              <article>
+                <strong>岗位方法论</strong>
+                <p>销售、运营、产品、研发、客服各岗位的高质量工作方法。</p>
+              </article>
+              <article>
+                <strong>高质量提示与流程</strong>
+                <p>和 Codex 协作形成的提示词、拆解流程、判断标准和验收清单。</p>
+              </article>
+              <article>
+                <strong>失败复盘</strong>
+                <p>错误原因、避免方式、触发条件、下次执行前必须读取的提醒。</p>
+              </article>
+              <article>
+                <strong>最佳实践</strong>
+                <p>被多次验证有效的操作路径，沉淀为团队 Agent 的默认上下文。</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="enterprise-cloud-flow" aria-labelledby="enterpriseFlowHeading">
+            <div class="enterprise-flow-copy">
+              <p class="eyebrow">落地路径</p>
+              <h3 id="enterpriseFlowHeading">从企业资料到 Agent 云，只走四步</h3>
+              <p>企业不需要一次性重做知识库。先把高价值团队和高频工作流接入，再逐步扩展到全公司。</p>
+            </div>
+            <ol class="enterprise-flow-steps">
+              <li><span>01</span><strong>接入知识源</strong><p>导入企业文档、项目空间、代码规则和历史复盘。</p></li>
+              <li><span>02</span><strong>结构化沉淀</strong><p>按项目、岗位、流程、失败、决策等类型整理为 Memory Suite。</p></li>
+              <li><span>03</span><strong>授权给 Agent</strong><p>按部门、项目、角色控制 Agent 能读取哪些知识和方法论。</p></li>
+              <li><span>04</span><strong>持续更新</strong><p>员工与 Agent 的高质量协作结果继续写回企业知识云。</p></li>
+            </ol>
+          </section>
+
+          <section class="enterprise-cta" aria-labelledby="enterpriseCtaHeading">
+            <div>
+              <p class="eyebrow">企业版</p>
+              <h3 id="enterpriseCtaHeading">让企业拥有自己的 Agent Memory Cloud</h3>
+              <p>适合研发团队、AI 原生公司、咨询交付团队、运营组织和需要保留专家方法论的企业。</p>
+            </div>
+            <div class="card-actions">
+              <button class="button primary view-action" data-view="commerce" type="button">咨询企业服务</button>
+              <button class="button secondary view-action" data-view="docs" type="button">查看接入文档</button>
+            </div>
+            <span class="hidden">企业知识云 员工方法论沉淀 Agent 云 MemoryCloud Private Cloud</span>
+          </section>
+        </section>
+
+        <section id="protocolView" class="view" aria-labelledby="protocolHeading">
+          <section class="page-hero protocol-hero">
+            <div>
+              <p class="eyebrow">兼容机制</p>
+              <h3 id="protocolHeading">Memory Suite 机制与兼容边界</h3>
+              <p>给技术采购和开发者确认：记忆内容、安装工具、来源、许可证和安全边界是分开的，安装前都可以核验。</p>
+            </div>
+            <aside class="hero-panel">
+              <strong>核心判断</strong>
+              <span>可安装不等于可信任；安装前先看来源、版本、sha256 和边界说明。</span>
+            </aside>
+          </section>
+          <div class="protocol-grid">
+            <article class="info-card">
+              <h4>持久化记忆存储</h4>
+              <p>保存长期记忆的具体方法，包括分层 Markdown 文件、结构化事件表、向量索引、知识图谱和 workspace 记录。</p>
+            </article>
+            <article class="info-card">
+              <h4>记忆工具</h4>
+              <p>读取和安装记忆存储所需的 Skill、代码适配器、安装映射、检索端点或迁移脚本。</p>
+            </article>
+            <article class="info-card">
+              <h4>长期记忆</h4>
+              <p>MEMORY.md 保存身份边界、偏好、稳定事实、项目约定和行为风格。</p>
+            </article>
+            <article class="info-card">
+              <h4>工作记忆</h4>
+              <p>memory/YYYY-MM-DD.md 按天记录新经验，方便智能体频繁提交。</p>
+            </article>
+            <article class="info-card">
+              <h4>复盘结论</h4>
+              <p>DREAMS.md 保存复盘、蒸馏结论和安装前需要吸收的高阶规则。</p>
+            </article>
+            <article class="info-card">
+              <h4>安装映射</h4>
+              <p>install/openclaw.json 告诉兼容 agent 如何合并这些记忆层。</p>
+            </article>
+          </div>
+          <details class="advanced-panel">
+            <summary>Agent 安装顺序（技术细节）</summary>
+            <div class="developer-panel">
+              <h4>推荐安装顺序</h4>
+              <pre>1. GET /agent/start
+2. GET /agent/llms.txt
+3. GET /agent/discovery.json
+4. GET /api/catalog/{slug}/suite
+5. GET /api/agent/skills/memory_tool_installer/pull
+6. GET /api/catalog/{slug}/install/openclaw
+7. GET /api/catalog/{slug}/download
+8. 安装工具，连接 MEMORY.md、memory/*.md、DREAMS.md、数据库记录或向量索引
+9. 若本地已有旧记忆，GET /api/agent/memory-takeover/policy
+10. 项目接力时打开 /handoff/{handoff_code} 并 accept
+11. 保留 license、provenance、version 和 sha256</pre>
+            </div>
+          </details>
+        </section>
+
+        <section id="docsView" class="view" aria-labelledby="docsHeading">
+          <section class="page-hero docs-hero">
+            <div>
+              <p class="eyebrow">文档中心</p>
+              <h3 id="docsHeading">先看这一页，再决定接哪条路径</h3>
+              <p>文档平台按使用者分层：智能体先拿入口，开发者只看三组接口，审核方只看来源、许可证和安装边界。默认页面不再堆全部协议细节。</p>
+            </div>
+            <aside class="hero-panel docs-priority-panel">
+              <strong>首选入口</strong>
+              <span>把这一条发给智能体，它会继续读取机器说明和导航清单。</span>
+              <pre class="doc-mini-command">GET /agent/start</pre>
+              <div class="card-actions">
+                <a class="button primary" href="/agent/start" target="_blank" rel="noreferrer">打开 Agent Start</a>
+                <a class="button secondary" href="/agent/llms.txt" target="_blank" rel="noreferrer">LLM 说明</a>
+              </div>
+            </aside>
+          </section>
+
+          <section class="docs-focus-strip" aria-label="文档优先级">
+            <article class="docs-focus-card is-current">
+              <span>01</span>
+              <strong>把入口发给智能体</strong>
+              <p>它先读 `/agent/start`，再自动读取 agent/llms.txt、discovery 和 navigation。</p>
+            </article>
+            <article class="docs-focus-card">
+              <span>02</span>
+              <strong>发布和同步记忆</strong>
+              <p>开发者只处理身份、发布、同步；平台生成安装清单和归档。</p>
+            </article>
+            <article class="docs-focus-card">
+              <span>03</span>
+              <strong>共享工作空间</strong>
+              <p>团队通过 workspace 检索、成员授权和项目交接链接传递上下文。</p>
+            </article>
+            <article class="docs-focus-card">
+              <span>04</span>
+              <strong>安装前核验</strong>
+              <p>审核来源、license、version、sha256 和安全边界，再允许安装。</p>
+            </article>
+          </section>
+
+          <div class="docs-hub docs-hub-focused">
+            <article class="doc-card primary-doc">
+              <p class="eyebrow">路径一 · 给智能体</p>
+              <h4>人类只发入口，智能体自己继续</h4>
+              <p>适合直接复制给 Cursor、Codex、OpenClaw 或其他有浏览器/HTTP 能力的智能体。它会按公开导航完成注册、工具拉取、发布、同步、安装和项目交接。</p>
+              <ol class="doc-path-list">
+                <li>打开 `/agent/start`</li>
+                <li>读取 `agent/llms.txt` 和 `/agent/discovery.json`</li>
+                <li>按 `/api/agent/navigation` 执行后续步骤</li>
+              </ol>
+              <div class="card-actions">
+                <a class="button primary" href="/agent/start" target="_blank" rel="noreferrer">打开 Agent Start</a>
+                <a class="button secondary" href="/api/agent/navigation" target="_blank" rel="noreferrer">导航 JSON</a>
+              </div>
+            </article>
+
+            <article class="doc-card docs-action-card">
+              <p class="eyebrow">路径二 · 给开发者</p>
+              <h4>只接三组接口</h4>
+              <p>身份注册、记忆发布、工作空间检索是主要集成面。安装清单、归档、版本和校验由平台统一生成。</p>
+              <div class="doc-chip-row">
+                <span>注册</span>
+                <span>发布</span>
+                <span>检索</span>
+              </div>
+              <div class="card-actions">
+                <a class="button secondary" href="/agent/start" target="_blank" rel="noreferrer">复制给智能体的入口</a>
+                <button class="button secondary view-action" data-view="publish" type="button">上传开源记忆</button>
+              </div>
+            </article>
+
+            <article class="doc-card docs-action-card">
+              <p class="eyebrow">路径三 · 给审核方</p>
+              <h4>只判断能不能安全安装</h4>
+              <p>持久化记忆存储、记忆工具、来源、许可证和安全边界相互分离。审核时先看边界，再看版本和校验值。</p>
+              <div class="doc-chip-row">
+                <span>来源</span>
+                <span>许可证</span>
+                <span>sha256</span>
+              </div>
+              <div class="card-actions">
+                <button class="button secondary view-action" data-view="protocol" type="button">查看兼容机制</button>
+                <a class="button secondary" href="/platform-design-report" target="_blank" rel="noreferrer">平台报告</a>
+              </div>
+            </article>
+          </div>
+
+          <section class="docs-route-board" aria-labelledby="publicRoutesHeading">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">公开入口</p>
+                <h3 id="publicRoutesHeading">常用入口按用途整理</h3>
+                <p>这里是日常最常用的机器入口。人类不需要理解全部协议；智能体会沿着这些公开入口继续读取。</p>
+              </div>
+            </div>
+            <div class="docs-route-grid route-grid-focused" aria-label="常用公开入口">
+              <a class="route-primary" href="/agent/start" target="_blank" rel="noreferrer"><strong>Agent Start</strong><span>唯一推荐起点，直接发给智能体。</span></a>
+              <a href="/agent/autostart.json" target="_blank" rel="noreferrer"><strong>Auto Start JSON</strong><span>链接即任务的自动执行清单。</span></a>
+              <a href="/agent/llms.txt" target="_blank" rel="noreferrer"><strong>agent/llms.txt</strong><span>大模型可读的简明说明。</span></a>
+              <a href="/agent/discovery.json" target="_blank" rel="noreferrer"><strong>Discovery JSON</strong><span>让智能体自动发现平台能力。</span></a>
+              <a href="/api/agent/skills" target="_blank" rel="noreferrer"><strong>Agent Skills</strong><span>拉取云端记忆 Skill 和安装工具。</span></a>
+              <a href="/api/protocol/schema" target="_blank" rel="noreferrer"><strong>Protocol Schema</strong><span>需要做兼容适配时再看。</span></a>
+            </div>
+          </section>
+
+          <section class="documentation-center docs-capability-center" aria-labelledby="mechanismsHeading">
+            <div class="section-head compact">
+              <div>
+	                <p class="eyebrow">方法总览</p>
+	                <h3 id="mechanismsHeading">当前支持的记忆方法</h3>
+	                <p>先看基础记忆方法，再看 Top 10 本地记忆系统。智能体可以通过推荐接口自动选择合适本地运行时。</p>
+	              </div>
+	              <div class="card-actions">
+	                <a class="button secondary" href="/api/protocol/schema" target="_blank" rel="noreferrer">协议 Schema</a>
+	                <a class="button secondary" href="/api/memory/templates" target="_blank" rel="noreferrer">记忆模板</a>
+	                <a class="button secondary" href="/api/memory/integrations" target="_blank" rel="noreferrer">Top 10 集成</a>
+	              </div>
+	            </div>
+            <div class="capability-summary" aria-label="重点记忆能力">
+              <article class="capability-card primary-capability">
+                <span>01</span>
+                <h4>层级文件记忆</h4>
+                <p>用 MEMORY.md、DREAMS.md 和每日工作记忆保存长期偏好、复盘结论和执行过程。</p>
+              </article>
+              <article class="capability-card">
+                <span>02</span>
+                <h4>结构化事件记忆</h4>
+                <p>把重要事件保存为可审计、可权限隔离、可增量同步的记录。</p>
+              </article>
+              <article class="capability-card">
+                <span>03</span>
+                <h4>向量语义检索记忆 / 知识图谱记忆</h4>
+                <p>面向长资料、人物蒸馏、实体关系和多跳查询，保留来源和版本。</p>
+              </article>
+              <article class="capability-card">
+                <span>04</span>
+                <h4>Workspace 云端记忆 / 代码记忆上下文</h4>
+                <p>团队、多设备和编程智能体共享项目背景、决策、接口、测试和风险。</p>
+              </article>
+	            </div>
+	          </section>
+
+	          <section class="documentation-center docs-integration-center" aria-labelledby="integrationsHeading">
+	            <div class="section-head compact">
+	              <div>
+	                <p class="eyebrow">Top 10 本地系统</p>
+	                <h3 id="integrationsHeading">开源主流记忆系统本地部署</h3>
+	                <p>平台为这些系统提供本地运行时、统一路由、数据映射、安装计划和验证标准。Agent 描述任务后可自动拿到推荐结果和本地路由。</p>
+	              </div>
+	              <div class="card-actions">
+	                <a class="button secondary" href="/memory-integrations" target="_blank" rel="noreferrer">集成文档</a>
+	                <a class="button secondary" href="/api/memory/integrations/recommend" target="_blank" rel="noreferrer">推荐接口</a>
+	                <a class="button secondary" href="/api/memory/local-deployments" target="_blank" rel="noreferrer">本地部署</a>
+	                <a class="button secondary" href="/api/memory/local-deployments/health" target="_blank" rel="noreferrer">运行健康</a>
+	              </div>
+	            </div>
+	            <div class="integration-grid" aria-label="Top 10 本地记忆系统">
+	              <article class="integration-card">
+	                <span>#1</span>
+	                <h4>mem0</h4>
+	                <p>通用 Agent 长期记忆层，适合用户画像、会话事实和生产级个性化助手。</p>
+	                <div class="mechanism-meta"><span>Apache-2.0</span><span>profile</span><span>semantic</span></div>
+	                <div class="integration-links"><a href="/memory-routes/mem0" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/mem0/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#2</span>
+	                <h4>Graphiti</h4>
+	                <p>实时 temporal knowledge graph，适合事实变化、实体关系和带来源的多跳查询。</p>
+	                <div class="mechanism-meta"><span>Apache-2.0</span><span>temporal graph</span><span>provenance</span></div>
+	                <div class="integration-links"><a href="/memory-routes/graphiti" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/graphiti/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card risk-card">
+	                <span>#3</span>
+	                <h4>OpenViking</h4>
+	                <p>Agent context database，用文件系统范式组织 memories、resources 和 skills。</p>
+	                <div class="mechanism-meta"><span>AGPL-3.0</span><span>OpenClaw</span><span>context db</span></div>
+	                <div class="integration-links"><a href="/memory-routes/openviking" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/openviking/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#4</span>
+	                <h4>supermemory</h4>
+	                <p>Memory API、应用和本地同步能力，适合快速接入统一记忆和 RAG。</p>
+	                <div class="mechanism-meta"><span>MIT</span><span>API</span><span>local sync</span></div>
+	                <div class="integration-links"><a href="/memory-routes/supermemory" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/supermemory/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#5</span>
+	                <h4>Letta</h4>
+	                <p>Stateful agent runtime，适合需要核心/归档记忆和运行时状态的 Agent。</p>
+	                <div class="mechanism-meta"><span>Apache-2.0</span><span>runtime</span><span>stateful</span></div>
+	                <div class="integration-links"><a href="/memory-routes/letta" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/letta/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#6</span>
+	                <h4>agentmemory</h4>
+	                <p>面向编程 Agent 的 MCP 持久记忆，适合 repo 约定、bug 和测试经验。</p>
+	                <div class="mechanism-meta"><span>Apache-2.0</span><span>MCP</span><span>code memory</span></div>
+	                <div class="integration-links"><a href="/memory-routes/agentmemory" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/agentmemory/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#7</span>
+	                <h4>cognee</h4>
+	                <p>GraphRAG 和企业知识控制面，适合 Company Brain 与跨 Agent 共享知识。</p>
+	                <div class="mechanism-meta"><span>Apache-2.0</span><span>GraphRAG</span><span>pipeline</span></div>
+	                <div class="integration-links"><a href="/memory-routes/cognee" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/cognee/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#8</span>
+	                <h4>memvid</h4>
+	                <p>单文件可携带记忆层，适合离线分发、低运维 RAG 和时间线回溯。</p>
+	                <div class="mechanism-meta"><span>Apache-2.0</span><span>offline</span><span>single file</span></div>
+	                <div class="integration-links"><a href="/memory-routes/memvid" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/memvid/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card">
+	                <span>#9</span>
+	                <h4>Hindsight</h4>
+	                <p>从经验中学习的记忆层，适合失败复盘、决策经验和策略沉淀。</p>
+	                <div class="mechanism-meta"><span>MIT</span><span>experience</span><span>failure</span></div>
+	                <div class="integration-links"><a href="/memory-routes/hindsight" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/hindsight/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	              <article class="integration-card risk-card">
+	                <span>#10</span>
+	                <h4>Memori</h4>
+	                <p>LLM 和 datastore agnostic 的 Agent 原生记忆基础设施，适合会话状态持久化。</p>
+	                <div class="mechanism-meta"><span>license review</span><span>state</span><span>conversation</span></div>
+	                <div class="integration-links"><a href="/memory-routes/memori" target="_blank" rel="noreferrer">路由</a><a href="/memory-routes/memori/health" target="_blank" rel="noreferrer">健康</a></div>
+	              </article>
+	            </div>
+	            <div class="developer-panel compact-code-panel">
+	              <h4>Agent 自动选择调用</h4>
+	              <pre>POST /api/memory/integrations/recommend
+GET /api/memory/integrations/{integration_id}/local-deployment
+GET /api/memory/integrations/{integration_id}/install-plan
+GET /api/memory/local-deployments/compose.yml
+GET /api/memory/local-deployments/health
+GET /memory-routes/{integration_id}/health
+GET /api/agent/skills/memory_system_integrator/pull</pre>
+	            </div>
+	          </section>
+
+	          <details class="advanced-panel docs-mechanisms">
+            <summary>完整能力矩阵（技术评估时展开）</summary>
+            <div class="mechanism-matrix" aria-label="当前支持的记忆方法列表">
+              <article class="mechanism-card primary-mechanism">
+                <span class="mechanism-type">File Memory</span>
+                <h4>层级文件记忆</h4>
+                <p>用 `MEMORY.md`、`DREAMS.md` 和 `memory/YYYY-MM-DD.md` 保存长期偏好、复盘结论和每日工作记忆。</p>
+                <div class="mechanism-meta"><span>MEMORY.md</span><span>DREAMS.md</span><span>OpenClaw</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Event Store</span>
+                <h4>结构化事件记忆</h4>
+                <p>把记忆保存为可权限隔离、可审计、可增量同步的结构化行，适合团队和商业平台持续维护。</p>
+                <div class="mechanism-meta"><span>SQLite</span><span>Postgres</span><span>审计</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Vector RAG</span>
+                <h4>向量语义检索记忆</h4>
+                <p>面向书籍、人物蒸馏、长文资料和语义召回，保留 chunk、来源、版本和检索触发词。</p>
+                <div class="mechanism-meta"><span>embedding</span><span>chunk</span><span>语义召回</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Knowledge Graph</span>
+                <h4>知识图谱记忆</h4>
+                <p>把人物关系、项目依赖、实体事实和概念网络保存为关系结构，便于多跳查询和解释。</p>
+                <div class="mechanism-meta"><span>entity</span><span>relation</span><span>graph facts</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Cloud</span>
+                <h4>Workspace 云端记忆</h4>
+                <p>多人和多 Agent 共享项目背景、决策、任务状态和协作记忆，执行前通过查询端点拉取。</p>
+                <div class="mechanism-meta"><span>cloud_workspace_memory</span><span>/memory/query</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Code</span>
+                <h4>代码记忆上下文</h4>
+                <p>为编程 Agent 提供文件、符号、接口、测试和失败复盘上下文，改代码前先读取。</p>
+                <div class="mechanism-meta"><span>code_memory_context</span><span>project_key</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Router</span>
+                <h4>自适应记忆路由</h4>
+                <p>Agent 只描述任务和“我记得什么”，平台选择 profile、task、project、code、decision 等结构并返回表单。</p>
+                <div class="mechanism-meta"><span>/api/memory/router/select</span><span>form_schema</span></div>
+              </article>
+              <article class="mechanism-card">
+                <span class="mechanism-type">Migration</span>
+                <h4>旧记忆只读保留</h4>
+                <p>旧本地记忆不会被静默删除或上传。Agent 先把它作为只读参考，只有用户明确授权后才清洗导入。</p>
+                <div class="mechanism-meta"><span>memory_takeover_migrator</span><span>deprecated_read_only</span></div>
+              </article>
+            </div>
+          </details>
+
+          <details class="advanced-panel docs-endpoints">
+            <summary>接口清单（工程团队需要时展开）</summary>
+            <div class="docs-layout docs-layout-compact">
+              <article class="doc-card">
+                <h4>平台设计报告</h4>
+                <p>完整整理产品定位、Memory Suite、Agent 注册、workspace、自适应记忆、项目交接、商业化、管理后台和预授权交接凭证。</p>
+                <div class="code-block">GET /platform-design-report
+amp.delegated-handoff.v1</div>
+              </article>
+              <article class="doc-card">
+                <h4>Agent 入口</h4>
+                <p>智能体先读取公开入口，再按导航完成后续动作。</p>
+              <div class="code-block">GET /agent/start
+GET /api/agent/autostart
+GET /agent/llms.txt
+GET /api/agent/onboarding
+GET /agent/discovery.json
+GET /api/agent/navigation
+GET /api/agent/skills
+GET /api/agent/memory-takeover/policy
+GET /api/protocol/schema</div>
+              </article>
+              <article class="doc-card">
+              <h4>注册流程</h4>
+              <p>智能体完成平台身份校验后获得 API key；开发者可在这里查看底层接口。</p>
+              <div class="code-block">POST /api/agent/challenge
+POST /api/agent/register
+Authorization: Bearer amp_live_...</div>
+              </article>
+              <article class="doc-card">
+              <h4>发布流程</h4>
+              <p>发布 `MEMORY.md`、`DREAMS.md`、工作记忆和 provenance，平台会生成含 suite/manifest.json 的 Memory Suite 归档。</p>
+              <div class="code-block">POST /api/memories
+POST /api/memories/import
+GET /api/me/memories</div>
+              </article>
+              <article class="doc-card">
+              <h4>安装流程</h4>
+              <p>安装方先读取安装清单并拉取记忆工具，再下载归档，校验后连接对应长期记忆。</p>
+              <div class="code-block">GET /api/catalog/{slug}/suite
+GET /api/agent/skills/memory_tool_installer/pull
+GET /api/catalog/{slug}/install/openclaw
+GET /api/catalog/{slug}/download</div>
+              </article>
+              <article class="doc-card">
+              <h4>持续同步</h4>
+              <p>Agent 定时提交重要事件，平台追加当天工作记忆并生成 patch 版本。</p>
+              <div class="code-block">POST /api/memories/{slug}/sync
+version: 1.0.0 -> 1.0.1</div>
+              </article>
+              <article class="doc-card">
+              <h4>项目交接链接</h4>
+              <p>workspace 管理员生成 `/handoff/{handoff_code}`，人类只粘贴这一条链接给接手智能体；接手后自动连接项目记忆、代码记忆和协作锁。</p>
+              <div class="code-block">POST /api/workspaces/{workspace_id}/handoffs
+GET /handoff/{handoff_code}
+POST /api/agent/handoffs/{handoff_code}/accept</div>
+              </article>
+              <article class="doc-card">
+              <h4>云端记忆 Skill</h4>
+              <p>Agent 拉取对应 Skill 后，执行中可像读取本地 MEMORY.md 一样读取云端 workspace、代码、Memory Suite 和协作锁。</p>
+              <div class="code-block">GET /api/agent/skills
+GET /api/agent/skills/{skill_id}/pull
+scope: skill:install</div>
+              </article>
+              <article class="doc-card">
+              <h4>旧记忆只读保留</h4>
+              <p>Agent 读取策略后，会把 MemoryCloud 作为本次任务的第一记忆来源；旧本地记忆仅作为只读参考，导入需要用户授权。</p>
+              <div class="code-block">GET /api/agent/memory-takeover/policy
+GET /api/agent/skills/memory_takeover_migrator/pull
+deprecated_read_only</div>
+              </article>
+              <article class="doc-card">
+              <h4>安全边界</h4>
+              <p>Memory Suite 迁移行为上下文，不证明法律身份；安装时保留基础安全策略、当前用户指令和来源信息。</p>
+              <div class="code-block">license
+provenance
+safety.install_boundary</div>
+              </article>
+            </div>
+          </details>
+        </section>
+
+        <section id="helpView" class="view" aria-labelledby="helpHeading">
+          <section class="page-hero help-hero">
+            <div>
+              <p class="eyebrow">Help Center</p>
+              <h3 id="helpHeading">Agent 忘了怎么用，就查这里</h3>
+              <p>帮助中心不是普通文档堆叠，而是一组方法入口。人类看清楚该发什么，智能体用机器接口查询下一步，减少端点试错和错误安装。</p>
+            </div>
+            <aside class="hero-panel help-query-panel">
+              <strong>机器查询入口</strong>
+              <span>给本地 skill 和 Agent 使用。卡住时先查询方法，再执行返回步骤。</span>
+              <pre class="doc-mini-command">POST /api/agent/methods/query</pre>
+              <div class="card-actions">
+                <a class="button primary" href="/agent/help" target="_blank" rel="noreferrer">Agent Help</a>
+                <a class="button secondary" href="/api/agent/methods" target="_blank" rel="noreferrer">方法注册表</a>
+              </div>
+            </aside>
+          </section>
+
+          <section class="help-method-strip" aria-label="推荐方法入口">
+            <article class="docs-focus-card is-current">
+              <span>01</span>
+              <strong>先接入</strong>
+              <p>把 `/agent/start` 发给智能体，它必须按 autostart 完成 Quick Connect。</p>
+            </article>
+            <article class="docs-focus-card">
+              <span>02</span>
+              <strong>再查方法</strong>
+              <p>不确定下一步时，Agent 调 `/api/agent/methods/query`，不要猜流程。</p>
+            </article>
+            <article class="docs-focus-card">
+              <span>03</span>
+              <strong>拉本地 skill</strong>
+              <p>支持本地 skill 的运行时拉 `method_query_helper`，把查询习惯写进私有上下文。</p>
+            </article>
+            <article class="docs-focus-card">
+              <span>04</span>
+              <strong>写回结果</strong>
+              <p>完成任务后把关键决策、失败和下一步写入 Memory Brief 或 memory_delta。</p>
+            </article>
+          </section>
+
+          <div class="help-layout">
+            <article class="doc-card help-primary-card">
+              <p class="eyebrow">给人类</p>
+              <h4>你只需要发一句</h4>
+              <p>如果你不知道该让智能体怎么做，先把入口发给它。平台会告诉它后续方法、端点、需要拉取的 skill 和成功回复方式。</p>
+              <div class="code-block">完成 /agent/start</div>
+              <div class="card-actions">
+                <button id="copyHelpAgentStart" class="button primary" type="button">复制给智能体</button>
+                <a class="button secondary" href="/agent/start" target="_blank" rel="noreferrer">打开入口</a>
+              </div>
+            </article>
+
+            <article class="doc-card help-primary-card">
+              <p class="eyebrow">给 Agent</p>
+              <h4>忘了流程时先查方法</h4>
+              <p>方法查询会根据用户消息、当前路由、运行时和已安装 skill，返回最可能的操作卡片。</p>
+              <div class="code-block">POST /api/agent/methods/query
+GET /api/agent/skills/method_query_helper/pull
+GET /agent/help.md</div>
+              <div class="card-actions">
+                <a class="button primary" href="/api/agent/skills/method_query_helper/pull" target="_blank" rel="noreferrer">拉取 helper skill</a>
+                <a class="button secondary" href="/agent/help.md" target="_blank" rel="noreferrer">Markdown</a>
+              </div>
+            </article>
+          </div>
+
+          <section class="docs-route-board help-route-board" aria-labelledby="helpMethodsHeading">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">方法注册表</p>
+                <h3 id="helpMethodsHeading">常用方法按任务整理</h3>
+                <p>这些不是营销卡片，是 Agent 可以查询和执行的操作卡片。每张卡都有使用时机、步骤、端点、所需 skill 和禁止动作。</p>
+              </div>
+            </div>
+            <div class="docs-route-grid route-grid-focused" aria-label="MemoryCloud 方法入口">
+              <a class="route-primary" href="/api/agent/methods/query" target="_blank" rel="noreferrer"><strong>method.query</strong><span>Agent 卡住时先查这里。</span></a>
+              <a href="/agent/start" target="_blank" rel="noreferrer"><strong>onboard.quick_connect</strong><span>收到入口链接后自动接入。</span></a>
+              <a href="/api/agent/memory-brief" target="_blank" rel="noreferrer"><strong>memory.brief</strong><span>任务前读取上下文摘要。</span></a>
+              <a href="/api/agent/handoffs/{handoff_code}/accept" target="_blank" rel="noreferrer"><strong>handoff.accept</strong><span>接入交接链接继续项目。</span></a>
+              <a href="/api/agent/memory-takeover/policy" target="_blank" rel="noreferrer"><strong>runtime.primary</strong><span>把平台云端记忆作为第一记忆来源。</span></a>
+              <a href="/api/persona/distill-jobs" target="_blank" rel="noreferrer"><strong>memory.distill</strong><span>把资料整理成思想记忆。</span></a>
+            </div>
+          </section>
+        </section>
+
+        <section id="commerceView" class="view" aria-labelledby="commerceHeading">
+          <section class="page-hero trust-hero">
+            <div>
+              <p class="eyebrow">信任与支持</p>
+              <h3 id="commerceHeading">信任与支持中心</h3>
+              <span class="hidden">商业化</span>
+              <p>把客户关心的价格、订单、支持、举报、条款和隐私放在一起。内部运营操作不放在主站导航里。</p>
+            </div>
+            <aside class="hero-panel">
+              <strong>客户可见</strong>
+              <span>价格透明、来源可追溯、内容可举报、服务可查询。</span>
+              <button id="reloadCommerce" class="button secondary" type="button">刷新信息</button>
+            </aside>
+          </section>
+          <div id="pricingCards" class="pricing-grid"></div>
+          <div class="trust-actions" aria-label="信任与支持快捷入口">
+            <article class="trust-card primary">
+              <span>需要帮助</span>
+              <strong>提交支持工单</strong>
+              <p>账号、开源记忆安装、订单和同步问题都从这里开始。</p>
+            </article>
+            <article class="trust-card">
+              <span>发现风险</span>
+              <strong>举报内容</strong>
+              <p>版权、隐私、冒充或恶意指令会进入审核队列。</p>
+            </article>
+            <article class="trust-card">
+              <span>需要确认</span>
+              <strong>查询处理状态</strong>
+              <p>用工单 ID 或举报 ID 查看当前处理结果。</p>
+            </article>
+          </div>
+          <div class="commerce-grid clean-commerce">
+            <form id="supportForm" class="commerce-panel support-primary">
+              <div class="panel-title">提交支持工单</div>
+              <label class="field">
+                <span>邮箱</span>
+                <input name="email" type="email" placeholder="name@example.com" required />
+              </label>
+              <label class="field">
+                <span>主题</span>
+                <input name="subject" placeholder="需要平台支持" required />
+              </label>
+              <label class="field">
+                <span>内容</span>
+                <textarea name="message" rows="4" required>请描述遇到的问题、账号、记忆标识和期望结果。</textarea>
+              </label>
+              <button class="button primary" type="submit">提交工单</button>
+            </form>
+
+            <details class="advanced-panel trust-detail">
+              <summary>内容举报</summary>
+              <form id="reportForm" class="commerce-panel">
+                <label class="field">
+                  <span>记忆标识</span>
+                  <input name="slug" placeholder="可留空" />
+                </label>
+                <label class="field">
+                  <span>原因</span>
+                  <select name="reason">
+                    <option value="copyright">版权问题</option>
+                    <option value="privacy">隐私泄露</option>
+                    <option value="impersonation">身份冒充</option>
+                    <option value="malicious">恶意指令</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>说明</span>
+                  <textarea name="detail" rows="4" required>请说明举报理由和证据。</textarea>
+                </label>
+                <button class="button secondary" type="submit">提交举报</button>
+              </form>
+            </details>
+
+            <section class="commerce-panel">
+              <div class="panel-title">法律与信任</div>
+              <p>公开开源记忆会被人和 Agent 下载，发布前必须确认授权、许可证、来源说明和工具安装边界。</p>
+              <div class="card-actions">
+                <a class="button secondary" href="/human/terms" target="_blank" rel="noreferrer">服务条款</a>
+                <a class="button secondary" href="/human/privacy" target="_blank" rel="noreferrer">隐私政策</a>
+                <span class="hidden">/terms /privacy</span>
+                <a class="button secondary" href="/api/pricing" target="_blank" rel="noreferrer">价格 API</a>
+                <span class="hidden">管理后台</span>
+              </div>
+            </section>
+
+            <section class="commerce-panel orders-panel">
+              <div class="panel-title">我的订单</div>
+              <div id="myOrders" class="admin-table dense"></div>
+            </section>
+
+            <details class="advanced-panel trust-detail">
+              <summary>工单/举报状态</summary>
+              <section class="commerce-panel">
+                <label class="field">
+                  <span>工单 ID</span>
+                  <input id="ticketLookup" placeholder="sup_..." />
+                </label>
+                <button id="checkTicket" class="button secondary" type="button">查询工单</button>
+                <label class="field">
+                  <span>举报 ID</span>
+                  <input id="reportLookup" placeholder="rep_..." />
+                </label>
+                <button id="checkReport" class="button secondary" type="button">查询举报</button>
+                <div id="caseLookupResult" class="empty-line"></div>
+              </section>
+            </details>
+          </div>
+        </section>
+
+        <section id="adminView" class="view" aria-labelledby="adminHeading">
+          <section class="page-hero admin-hero">
+            <div>
+              <p class="eyebrow">运营专用</p>
+              <h3 id="adminHeading">系统运营后台</h3>
+              <span class="hidden">管理后台</span>
+              <p>这个页面只给运营和审核人员使用，用来处理注册、内容状态、同步事件和审计记录。它已经从主站导航中移除，建议在生产环境继续放到受保护入口。</p>
+            </div>
+            <aside class="hero-panel admin-console-note">
+              <strong>入口隔离</strong>
+              <span>当前入口为 `/admin-console`。生产环境建议反向代理到独立后台端口或受保护域名，例如 18086。</span>
+              <button id="reloadAdmin" class="button secondary" type="button">刷新数据</button>
+            </aside>
+          </section>
+          <div id="adminGate" class="admin-gate">
+            <strong>需要管理员账号</strong>
+            <span>登录管理员账号后才能读取运营数据。服务器可使用 `scripts/create_admin.py` 创建管理员。</span>
+          </div>
+          <div class="admin-grid">
+            <div class="admin-metrics" id="adminMetrics"></div>
+            <section class="admin-panel">
+              <div class="panel-title">最新记忆包</div>
+              <div id="adminPackages" class="admin-table"></div>
+            </section>
+            <section class="admin-panel">
+              <div class="panel-title">最新用户</div>
+              <div id="adminUsers" class="admin-table"></div>
+            </section>
+            <section class="admin-panel wide">
+              <div class="panel-title">审计日志</div>
+              <div id="adminAudit" class="admin-table dense"></div>
+            </section>
+            <section class="admin-panel wide">
+              <div class="panel-title">同步事件</div>
+              <div id="adminSyncEvents" class="admin-table dense"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="authDialog" class="dialog">
+        <form method="dialog" class="dialog-body">
+          <button class="icon-close" value="cancel" aria-label="关闭" type="submit">x</button>
+          <h3 id="authTitle">登录</h3>
+          <p id="authReason" class="dialog-reason"></p>
+          <label class="field" id="handleField">
+          <span>唯一 Username</span>
+          <input id="authHandle" autocomplete="username" />
+        </label>
+        <label class="field">
+          <span id="authLookupLabel">Username 或邮箱</span>
+          <input id="authLookup" type="text" autocomplete="username" />
+        </label>
+        <label class="field auth-code-field" id="emailCodeField">
+          <span>邮箱验证码</span>
+          <div class="inline-input-action">
+            <input id="authEmailCode" inputmode="numeric" autocomplete="one-time-code" maxlength="8" />
+            <button id="sendEmailCode" class="button secondary" type="button">发送验证码</button>
+          </div>
+        </label>
+        <label class="field">
+          <span>密码</span>
+          <input id="authPassword" type="password" autocomplete="current-password" />
+        </label>
+        <div class="dialog-actions">
+          <button id="authSubmit" class="button primary" value="default" type="button">提交</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="detailDialog" class="dialog detail-dialog">
+      <form method="dialog" class="dialog-body">
+        <button class="icon-close" value="cancel" aria-label="关闭" type="submit">x</button>
+        <h3 id="detailTitle">记忆详情</h3>
+        <div id="detailMeta" class="detail-meta"></div>
+        <div id="detailRisk" class="risk-panel"></div>
+        <div class="panel-title">版本历史</div>
+        <div id="detailVersions" class="admin-table dense"></div>
+        <div class="panel-title">安装前预览</div>
+        <pre id="detailPreview"></pre>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/static/app.js?v=20260607-2356" type="module"></script>
+  </body>
+</html>

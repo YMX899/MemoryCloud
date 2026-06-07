@@ -1,0 +1,18 @@
+services:
+  memorycloud:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DATA_ROOT: /data
+      DATABASE_PATH: /data/platform.sqlite3
+      STORAGE_DIR: /data/archives
+      LLM_PROVIDER_CONFIG: /data/llm_provider.json
+    volumes:
+      - memorycloud-data:/data
+    restart: unless-stopped
+
+volumes:
+  memorycloud-data:

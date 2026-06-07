@@ -1,0 +1,37 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+data/
+.memorycloud-data/
+*.pyc
+*.pyo
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# Local/editor state
+.vscode/
+.idea/
+.agents/
+.codex/
+.local/
+.tools/
+reports/
+codex-ui-memory-docs/
+
+# Vendored or unrelated workspaces
+openclaw-1000-agents/
+
+# Production/private materials
+验证码收发方法.md
+docs/OPERATIONS.md
+docs/DEVELOPMENT.md
+docs/SEARCH_SUBMISSION_CN.md
+docs/COMMERCIAL_QUALITY_STANDARDS.md
+docs/COMMERCIAL_QUALITY_STANDARDS.json
+scripts/commercial_quality_gate.py
+scripts/submit_*.py
